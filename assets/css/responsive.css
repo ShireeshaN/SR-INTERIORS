@@ -1,7 +1,8 @@
 @media (max-width: 991px) {
   .navbar-toggler {
     border: none;
-    background-color: transparent;
+    background-color: #D49826;
+    padding: 10px;
   }
 
   .dot-container {
