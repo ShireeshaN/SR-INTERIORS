@@ -334,7 +334,7 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   z-index: 1;
 }
 
@@ -2320,3 +2320,4 @@ q {
   height: 90px;
   width:100%
 }
+
