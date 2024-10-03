@@ -161,12 +161,10 @@
         </div>
       </li>
               <li class="nav-item nav-list">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                <a class="nav-link" href="portfolio.html">Projects</a>
               </li  <li class="nav-item nav-list">
                
-  <li class="nav-item nav-list">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
+ 
               <li class="nav-item nav-list">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
@@ -349,11 +347,11 @@
             <div class="about-txt-part side-txt-part">
               <div class="main-heading">
                 <h6> <svg width="105" height="85" viewBox="0 0 87 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M84 3H29C14.6406 3 3 14.6406 3 29V63" stroke="white"></path>
+                  <path d="M84 3H29C14.6406 3 3 14.6406 3 29V63" stroke="black"></path>
                   <circle cx="84" cy="3" r="3" fill="#e45c0c"></circle>
                   <circle cx="3" cy="63" r="3" fill="#e45c0c"></circle>
               </svg>About Us</h6>
-                <h1>Discover the art of interior transformation
+                <h1 class="text-dark">Discover the art of interior transformation
                 </h1>
                 <p>Here at La’espace, we create spaces that evoke magic through the use of color, pattern, and storytelling.  Our approach is collaborative and hands-on, we listen and love to create a space that truly reflects your life and lifestyle.
                 </p>
@@ -362,14 +360,14 @@
               <div class="about-bottom-area">
               
                 <div class="about-button-part">
-                <a href="about.html" class="main-clk-btn">
+                <a href="about.html" class="main-clk-btn text-dark">
                   About Us</a>
-                  <div class="circle-btn-area">
+                  <!-- <div class="circle-btn-area">
                     <div class="circle-btn"><button class="circle-btn-round-btn"><i class="bi bi-telephone-fill"></i></button></div>
                     <div class="circle-btn-text"><h6>Have any question?
                     </h6><h4>+91  99855 99655
                     </h4></div>
-                   </div>
+                   </div> -->
                 </div>
                 
                </div>
@@ -380,6 +378,117 @@
           </div>
     </section>
 
+
+
+    <div class="section">
+      <div class="left-column">
+        <h2>Heading</h2>
+      </div>
+      
+      <div class="right-column">
+        <div class="scroll-container">
+          <div class="scroll-item">
+            <img src="images/living-room-2155376_1920.jpg" alt="Image 1">
+            <div class="text-overlay">Step 1: Image Description</div>
+          </div>
+          <div class="scroll-item">
+            <img src="images/living-room-2155376_1920.jpg" alt="Image 2">
+            <div class="text-overlay">Step 2: Image Description</div>
+          </div>
+          <div class="scroll-item">
+            <img src="images/living-room-2155376_1920.jpg" alt="Image 3">
+            <div class="text-overlay">Step 3: Image Description</div>
+          </div>
+          <div class="scroll-item">
+            <img src="images/living-room-2155376_1920.jpg" alt="Image 4">
+            <div class="text-overlay">Step 4: Image Description</div>
+          </div>
+          <!-- Add more scroll items as needed -->
+        </div>
+      </div>
+    </div>
+    
+    <style>
+      /* Main Section layout */
+      .section {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        gap: 20px; /* Space between heading and scroll */
+      }
+    
+      /* Left column with heading */
+      .left-column {
+        width: 20%;
+        text-align: center;
+      }
+    
+      /* Right column containing scrollable images */
+      .right-column {
+        width: 80%;
+        overflow: hidden;
+        position: relative;
+      }
+    
+      /* Scroll container with animation */
+      .scroll-container {
+        display: flex;
+        animation: scroll-right-left 20s linear infinite;
+        width: 100%;
+      }
+    
+      .scroll-item {
+        position: relative;
+        margin-right: 20px;
+        min-width: 300px;
+        max-width: 400px;
+      }
+    
+      .scroll-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+    
+      /* Text overlay on image */
+      .text-overlay {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        color: white;
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 3px;
+      }
+    
+      /* Keyframes for slow right to left scroll */
+      @keyframes scroll-right-left {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    
+      /* Responsive Design: For Mobile */
+      @media screen and (max-width: 768px) {
+        .section {
+          flex-direction: column;
+        }
+    
+        .left-column, .right-column {
+          width: 100%;
+          text-align: center;
+        }
+    
+        .scroll-item {
+          min-width: 90%; /* Make images larger in mobile view */
+        }
+      }
+    </style>
+    
 
     
     <section class="service-section section-size mt-space mb-space pt-space pb-space">

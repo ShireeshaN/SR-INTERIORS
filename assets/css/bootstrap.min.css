@@ -4532,6 +4532,9 @@ fieldset:disabled .btn {
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    
     
 }
 

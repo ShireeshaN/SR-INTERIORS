@@ -606,6 +606,7 @@ th {
     .navbar {
         display: none;
         position:fixed;
+      
     }
 
     .btn>.caret,
