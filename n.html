@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .main-heading {
+            margin-bottom: 10px;
+        }
+
+        .sub-heading {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .image-gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .image-container {
+            overflow: hidden;
+            width: 80%;
+        }
+
+        .images-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-image {
+            width: 200px;
+            height: auto;
+            margin: 5px;
+            flex-shrink: 0;
+        }
+
+        .nav-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .prevButton {
+            left: 10px;
+        }
+
+        .nextButton {
+            right: 10px;
+        }
+
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">Image Gallery</h1>
+        <h2 class="sub-heading">Scroll Through Amazing Pictures</h2>
+
+        <!-- Ceiling Image Gallery -->
+        <h3>Ceiling</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="images/design-img3.jpg" alt="Image 1" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 2" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 3" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 4" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 1" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 2" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 3" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 4" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+        <!-- Lighting Image Gallery -->
+        <h3>Lighting</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="images/design-img3.jpg" alt="Image 5" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 6" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 7" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 8" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 1" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 2" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 3" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 4" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+        <!-- Flooring Image Gallery -->
+        <h3>Flooring</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="images/design-img3.jpg" alt="Image 9" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 10" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 11" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 12" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 1" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 2" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 3" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 4" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle gallery scrolling for a specific gallery
+        function initializeGallery(gallery) {
+            const imagesWrapper = gallery.querySelector('.images-wrapper');
+            const images = gallery.querySelectorAll('.gallery-image');
+            const totalImages = images.length;
+            const imageWidth = images[0].offsetWidth + 10; // Include margin between images
+            let currentIndex = 0;
+
+            // Function to update the position of the image container
+            function updateImages() {
+                imagesWrapper.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+            }
+
+            // Handle next button click
+            gallery.querySelector('.nextButton').addEventListener('click', () => {
+                currentIndex += 1;
+                if (currentIndex >= totalImages - 2) { // Adjust for visible images (2 visible)
+                    currentIndex = totalImages - 2;
+                }
+                updateImages();
+            });
+
+            // Handle previous button click
+            gallery.querySelector('.prevButton').addEventListener('click', () => {
+                currentIndex -= 1;
+                if (currentIndex < 0) {
+                    currentIndex = 0;
+                }
+                updateImages();
+            });
+        }
+
+        // Initialize each gallery on the page
+        document.querySelectorAll('.image-gallery').forEach(gallery => {
+            initializeGallery(gallery);
+        });
+    </script>
+</body>
+</html>

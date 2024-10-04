@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SR-Interiors | Contact</title>
+    <title>SR-Interiors </title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -128,127 +128,140 @@
        
       </section>
 
-      <div class="container">
-        <h1 class="main-heading">Residential Services</h1>
-        <h2 class="sub-heading">Ceiling</h2>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            /* max-width: 800px; */
+            margin: auto;
+            text-align: center;
+        }
+
+        .main-heading {
+            margin-bottom: 10px;
+            color: #D49826;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .sub-heading {
+            margin-bottom: 20px;
+            color: #EDBE6C;
+        }
+
+        .image-gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .image-container {
+            overflow: hidden;
+            width: 80%;
+        }
+
+        .images-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-image {
+            width: 260px;
+            height: auto;
+            margin: 5px;
+            flex-shrink: 0;
+        }
+
+        .nav-button {
+            background-color: #EDBE6C;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .prevButton {
+            left: 10px;
+        }
+
+        .nextButton {
+            right: 10px;
+        }
+
+        .nav-button:hover {
+            background-color: #EDBE6C;
+        }
+    </style>
+      <div class="container"></div>
+       
+        <h2 class="sub-heading text-center mt-3">Residential Services</h2>
+
+        <!-- Ceiling Image Gallery -->
+        <h3 class="text-center main-heading">Ceiling</h3>
         <div class="image-gallery">
-            <button id="prevButton" class="nav-button">◀</button>
-            <div class="image-container" id="imageContainer">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
                 <div class="images-wrapper">
                     <img src="images/design-img3.jpg" alt="Image 1" class="gallery-image">
                     <img src="images/living-room-2155376_1920.jpg" alt="Image 2" class="gallery-image">
                     <img src="images/design-img3.jpg" alt="Image 3" class="gallery-image">
                     <img src="images/living-room-2155376_1920.jpg" alt="Image 4" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 4" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+        <!-- Lighting Image Gallery -->
+        <h3 class="text-center main-heading">Lighting</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
                     <img src="images/design-img3.jpg" alt="Image 5" class="gallery-image">
                     <img src="images/living-room-2155376_1920.jpg" alt="Image 6" class="gallery-image">
                     <img src="images/design-img3.jpg" alt="Image 7" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 8" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 8" class="gallery-image">
                 </div>
             </div>
-            <button id="nextButton" class="nav-button">▶</button>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+        <!-- Flooring Image Gallery -->
+        <h3 class="text-center main-heading">Flooring</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="images/design-img3.jpg" alt="Image 9" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 10" class="gallery-image">
+                    <img src="images/design-img3.jpg" alt="Image 11" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 12" class="gallery-image">
+                    <img src="images/living-room-2155376_1920.jpg" alt="Image 12" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
         </div>
     </div>
 
-    <style>
-      body {
-          font-family: Arial, sans-serif;
-          background-color: #f9f9f9;
-          margin: 0;
-          padding: 20px;
-      }
+    
 
-      .container {
-          max-width: 1000px;
-          margin: auto;
-          text-align: center;
-         
-      }
-
-      .main-heading {
-          margin-bottom: 10px;
-      }
-
-      .sub-heading {
-          margin-bottom: 20px;
-          color: #555;
-      }
-
-      .image-gallery {
-          display: flex;
-          align-items: center;
-          justify-content: center; /* Center align buttons */
-      }
-
-      .image-container {
-          overflow: hidden;
-          width: 100%; /* Adjust width to fit your layout */
-          position: relative;
-      }
-
-      .images-wrapper {
-          display: flex;
-          transition: transform 0.5s ease; /* Smooth transition */
-      }
-
-      .gallery-image {
-          width: 250px; /* Adjust for margin */
-          height: 300px;
-          flex-shrink: 0; /* Prevent images from shrinking */
-          margin: 5px; /* Add space between images */
-      }
-
-      .nav-button {
-          background-color: #007bff;
-          color: white;
-          border: none;
-          padding: 10px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-      }
-
-      .nav-button:hover {
-          background-color: #0056b3;
-      }
-      
-
-  </style>
-  <script>
-      const imageContainer = document.getElementById('imageContainer');
-      const imagesWrapper = document.querySelector('.images-wrapper');
-      const images = document.querySelectorAll('.gallery-image');
-      const totalImages = images.length;
-      let currentIndex = 0;
-
-      // Function to update image display
-      function updateImages() {
-          // Calculate the width of the container
-          const slideWidth = 100 / 3; // 3 images shown at a time
-          imagesWrapper.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-      }
-
-      // Navigation functions
-      function showNextImages() {
-          currentIndex += 1;
-          if (currentIndex > totalImages - 3) {
-              currentIndex = 0; // Loop back to the beginning
-          }
-          updateImages();
-      }
-
-      function showPrevImages() {
-          currentIndex -= 1;
-          if (currentIndex < 0) {
-              currentIndex = totalImages - 3; // Loop back to the end
-          }
-          updateImages();
-      }
-
-      // Event listeners for buttons
-      document.getElementById('nextButton').addEventListener('click', showNextImages);
-      document.getElementById('prevButton').addEventListener('click', showPrevImages);
-
-      // Automatic scrolling every 3 seconds
-      setInterval(showNextImages, 3000);
-  </script>
+    
+ 
 
 
      
@@ -381,7 +394,71 @@
           </div>
         </div>
     
-    </footer>    </main>
+    </footer>    
+  </main>
+
+
+  <script>
+    // Function to handle gallery scrolling for a specific gallery
+    function initializeGallery(gallery) {
+        const imagesWrapper = gallery.querySelector('.images-wrapper');
+        const images = gallery.querySelectorAll('.gallery-image');
+        const totalImages = images.length;
+        const imageWidth = images[0].offsetWidth + 10; // Include margin between images
+        let currentIndex = 0;
+        let autoScrollInterval;
+
+        // Function to update the position of the image container
+        function updateImages() {
+            imagesWrapper.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        }
+
+        // Handle next button click
+        gallery.querySelector('.nextButton').addEventListener('click', () => {
+            currentIndex += 1;
+            if (currentIndex >= totalImages - 2) { // Adjust for visible images (2 visible)
+                currentIndex = totalImages - 2;
+            }
+            updateImages();
+        });
+
+        // Handle previous button click
+        gallery.querySelector('.prevButton').addEventListener('click', () => {
+            currentIndex -= 1;
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
+            updateImages();
+        });
+
+        // Auto-scroll function
+        function autoScroll() {
+            currentIndex += 1;
+            if (currentIndex >= totalImages - 2) { // Adjust for visible images
+                currentIndex = 0; // Start again when reaching the end
+            }
+            updateImages();
+        }
+
+        // Start auto-scrolling every 3 seconds
+        autoScrollInterval = setInterval(autoScroll, 3000);
+
+        // Pause auto-scrolling on mouse hover
+        gallery.addEventListener('mouseover', () => {
+            clearInterval(autoScrollInterval);
+        });
+
+        // Resume auto-scrolling when mouse leaves
+        gallery.addEventListener('mouseout', () => {
+            autoScrollInterval = setInterval(autoScroll, 3000);
+        });
+    }
+
+    // Initialize each gallery on the page
+    document.querySelectorAll('.image-gallery').forEach(gallery => {
+        initializeGallery(gallery);
+    });
+</script>
  
 
 <script
