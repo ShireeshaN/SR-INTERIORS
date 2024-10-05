@@ -39,105 +39,77 @@
 
 
   <main class="bg-pattern">
-  <nav class="navbar navbar-expand-lg navigation navbar-lg" id="Nav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><img src="assets/images/logo/logo.webp"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#leadUIMainNav"
-            aria-controls="leadUIMainNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <div class="nav-toggle">
-              <span class="bar-top"></span>
-              <span class="bar-mid"></span>
-              <span class="bar-bot"></span>
+ 
+<nav class="navbar navbar-expand-lg navigation navbar-lg" id="Nav">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img class="logos" src="assets/images/logo/3.png" alt="Logo"/>
+      </a>
+  
+      <!-- Hamburger Menu Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#leadUIMainNav"
+        aria-controls="leadUIMainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <div class="nav-toggle">
+          <span class="bar-top"></span>
+          <span class="bar-mid"></span>
+          <span class="bar-bot"></span>
+        </div>
+      </button>
+  
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="leadUIMainNav">
+        <ul class="navbar-nav ml-auto mt-lg-0">
+          <!-- Home Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+  
+          <!-- About Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+  
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="turnkey-projects.html">Turnkey Projects</a>
+              <a class="dropdown-item" href="design-consultation.html">Design Consultation</a>
+              <a class="dropdown-item" href="spatial-design.html">Spatial Design</a>
+              <a class="dropdown-item" href="lighting-consultation.html">Lighting Consultation</a>
+              <a class="dropdown-item" href="modular-solutions.html">Modular Solutions</a>
+              <a class="dropdown-item" href="revamping.html">Revamping</a>
             </div>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="leadUIMainNav"
-          >
-            <ul class="navbar-nav ml-auto mt-lg-0">
-              <li class="nav-item nav-list">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-
-              <li class="nav-item nav-list">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-            
-              <li class="nav-item dropdown nav-list">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Services
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         <!-- <a class="dropdown-item" href="residential.php">Residential</a>
-          <a class="dropdown-item" href="commercial.php">Commercial</a>-->
-          <a class="dropdown-item" href="turnkey-projects.php">Turnkey Projects</a>
-          <a class="dropdown-item" href="design-consultation.php">Design Consultation</a>
-           <a class="dropdown-item" href="spatial-design.php">Spatial Design</a>
-            <a class="dropdown-item" href="lighting-consultation.php">Lighting Consultation</a>
-             <a class="dropdown-item" href="modular-solutions.php">Modular Solutions</a>
-              <a class="dropdown-item" href="revamping.php">Revamping</a>
-        </div>
-      </li>
-              <li class="nav-item nav-list">
-                <a class="nav-link" href="portfolio.php">Portfolio</a>
-              </li  <li class="nav-item nav-list">
-               
-  <li class="nav-item nav-list">
-                <a class="nav-link" href="blog.php">Blog</a>
-              </li>
-              <li class="nav-item nav-list">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item nav-btn">
-                <div class="btn-outer">
-                  <a class="btn-inner" href="tel:+919985599655"
-                    >Call Us!<br />
-                    <div>+91 99855 99655</div>
-                   </a>
-                </div>
-              </li>
-
-              <li class="nav-item nav-btn">
-                <div class="btn-outer">
-                  <a class="btn-inner" href="mailto:projects@laespace.com"
-                    >Mail Us!<br />
-                    <div>projects@laespace.com</div></a
-                  >
-                </div>
-              </li>
-
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
+          </li>
+  
+          <!-- Projects Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Packages</a>
+          </li>
+  
+          <!-- Contact Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
-      <section class="breadcrumb-section">
-        <img src="assets/images/3d/b34.webp" class="breadcrumb-section-img" />
-        <div class="bread-txt">
-          <h1>Contact Us</h1>
-        </div>
-        <div class="breadcrumb-content">
-          <div aria-label="breadcrumb" class="bread">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Contact
-              </li>
-            </ol>
-          </div>
-        </div>
-      </section>
+    
 
       <h1 class="text-center main-heading">Residential</h1>
 
