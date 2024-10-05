@@ -606,6 +606,8 @@ th {
     .navbar {
         display: none;
         position:fixed;
+      
+       
        
         
       
@@ -2011,12 +2013,12 @@ mark,
 }
 
 .text-primary {
-    color: #337ab7;
+    color: #D19A23;
 }
 
 a.text-primary:hover,
 a.text-primary:focus {
-    color: #286090;
+    color: #EDBE6C;
 }
 
 .text-success {
