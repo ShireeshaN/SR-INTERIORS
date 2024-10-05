@@ -1,0 +1,711 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SR-Interiors </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/fav.webp">  </head>
+  <body>
+ 
+
+
+  <main class="bg-pattern">
+  <nav class="navbar navbar-expand-lg navigation navbar-lg" id="Nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img src="assets/images/logo/logo.webp"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#leadUIMainNav"
+            aria-controls="leadUIMainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <div class="nav-toggle">
+              <span class="bar-top"></span>
+              <span class="bar-mid"></span>
+              <span class="bar-bot"></span>
+            </div>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="leadUIMainNav"
+          >
+            <ul class="navbar-nav ml-auto mt-lg-0">
+              <li class="nav-item nav-list">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+
+              <li class="nav-item nav-list">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            
+              <li class="nav-item dropdown nav-list">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+         <!-- <a class="dropdown-item" href="residential.php">Residential</a>
+          <a class="dropdown-item" href="commercial.php">Commercial</a>-->
+          <a class="dropdown-item" href="turnkey-projects.php">Turnkey Projects</a>
+          <a class="dropdown-item" href="design-consultation.php">Design Consultation</a>
+           <a class="dropdown-item" href="spatial-design.php">Spatial Design</a>
+            <a class="dropdown-item" href="lighting-consultation.php">Lighting Consultation</a>
+             <a class="dropdown-item" href="modular-solutions.php">Modular Solutions</a>
+              <a class="dropdown-item" href="revamping.php">Revamping</a>
+        </div>
+      </li>
+              <li class="nav-item nav-list">
+                <a class="nav-link" href="portfolio.php">Portfolio</a>
+              </li  <li class="nav-item nav-list">
+               
+  <li class="nav-item nav-list">
+                <a class="nav-link" href="blog.php">Blog</a>
+              </li>
+              <li class="nav-item nav-list">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item nav-btn">
+                <div class="btn-outer">
+                  <a class="btn-inner" href="tel:+919985599655"
+                    >Call Us!<br />
+                    <div>+91 99855 99655</div>
+                   </a>
+                </div>
+              </li>
+
+              <li class="nav-item nav-btn">
+                <div class="btn-outer">
+                  <a class="btn-inner" href="mailto:projects@laespace.com"
+                    >Mail Us!<br />
+                    <div>projects@laespace.com</div></a
+                  >
+                </div>
+              </li>
+
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <section class="breadcrumb-section">
+        <img src="assets/images/3d/b34.webp" class="breadcrumb-section-img" />
+        <div class="bread-txt">
+          <h1>Contact Us</h1>
+        </div>
+       
+      </section>
+
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            /* max-width: 800px; */
+            margin: auto;
+            text-align: center;
+        }
+
+        .main-heading {
+            margin-bottom: 10px;
+            color: #D49826;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .sub-heading {
+            margin-bottom: 20px;
+            color: #EDBE6C;
+        }
+
+        .image-gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .image-container {
+            overflow: hidden;
+            width: 80%;
+        }
+
+        .images-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-image {
+            width: 260px;
+            height: auto;
+            margin: 5px;
+            flex-shrink: 0;
+        }
+
+        .nav-button {
+            background-color: #EDBE6C;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .prevButton {
+            left: 10px;
+        }
+
+        .nextButton {
+            right: 10px;
+        }
+
+        .nav-button:hover {
+            background-color: #EDBE6C;
+        }
+    </style>
+      <div class="container"></div>
+       
+        <h2 class="sub-heading text-center mt-3">Residential Services</h2>
+
+        <!-- Ceiling Image Gallery -->
+        <h3 class="text-center main-heading">Kitchen</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="assets/images/kitchen-services/1.png" alt="Image 1" class="gallery-image">
+                    <img src="assets/images/kitchen-services/2.png" alt="Image 2" class="gallery-image">
+                    <img src="assets/images/kitchen-services/3.png" alt="Image 3" class="gallery-image">
+                    <img src="assets/images/kitchen-services/4.png" alt="Image 4" class="gallery-image">
+                    <img src="assets/images/kitchen-services/5.png" alt="Image 4" class="gallery-image">
+                    <img src="assets/images/kitchen-services/6.png" alt="Image 2" class="gallery-image">
+                    <img src="assets/images/kitchen-services/7.png" alt="Image 3" class="gallery-image">
+                    <img src="assets/images/kitchen-services/8.png" alt="Image 4" class="gallery-image">
+                    <img src="assets/images/kitchen-services/9.png" alt="Image 4" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+        <!-- Lighting Image Gallery -->
+        <h3 class="text-center main-heading">Wardrobe</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="assets/images/wardrobe/3cc8accb-b555-4944-8db9-5ee0ddc16af1.jpg" alt="Image 5" class="gallery-image">
+                    <img src="assets/images/wardrobe/3e3d4e11-d4fc-4dfe-ae2a-cde3e550d3cd.jpg" alt="Image 6" class="gallery-image">
+                    <img src="assets/images/wardrobe/4fba9d8c-eaa1-42a5-85f3-0531b6898db2.jpg" alt="Image 7" class="gallery-image">
+                    <img src="assets/images/wardrobe/5ea1bcc2-d66e-42ce-8171-a8fc0eef3f5e.jpg" alt="Image 8" class="gallery-image">
+                    <img src="assets/images/wardrobe/6f8b6ad1-427e-4511-bf57-d0eb091dda9e.jpg" alt="Image 8" class="gallery-image">
+                    <img src="assets/images/wardrobe/7aba11fd-e7bf-4379-a23d-71e4f0a41ef1.jpg" alt="Image 5" class="gallery-image">
+                    <img src="assets/images/wardrobe/7e40a188-398d-4908-a13c-164e2f9a7de8.jpg" alt="Image 6" class="gallery-image">
+                    <img src="assets/images/wardrobe/8a3dee61-7bd8-47a7-838d-ad7074227191.jpg" alt="Image 7" class="gallery-image">
+                    <img src="assets/images/wardrobe/8cee4afc-545d-436d-880e-ef9d8e9da41e.jpg" alt="Image 8" class="gallery-image">
+                    <img src="assets/images/wardrobe/83f4f4dd-410f-47b6-bdb1-31cbadf252c1.jpg" alt="Image 8" class="gallery-image">
+                    <img src="assets/images/wardrobe/9426d629-6af5-4018-8177-ccab1de77506.jpg" alt="Image 5" class="gallery-image">
+                    <img src="assets/images/wardrobe/57633d8e-f79d-4862-bfc3-df55e216cfcc.jpg" alt="Image 6" class="gallery-image">
+                    <img src="assets/images/wardrobe/0771377b-98e9-4894-912f-e7c2675fc21c.jpg" alt="Image 7" class="gallery-image">
+                    <img src="assets/images/wardrobe/a73bb51a-54b5-4c21-9ab0-da8b94ac3f08.jpg" alt="Image 8" class="gallery-image">
+                    <img src="assets/images/wardrobe/d17361b2-af96-4d94-89f5-9f2b59e69869.jpg" alt="Image 8" class="gallery-image">
+                    <img src="assets/images/wardrobe/IMG_2212.JPG" alt="Image 5" class="gallery-image">
+                    <img src="assets/images/wardrobe/IMG_3235.jpg" alt="Image 6" class="gallery-image">
+                    <img src="assets/images/wardrobe/IMG_3724.jpg" alt="Image 7" class="gallery-image">
+                    <img src="assets/images/wardrobe/IMG_3729.jpg" alt="Image 8" class="gallery-image">
+                    <img src="assets/images/wardrobe/IMG_3732.jpg" alt="Image 8" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+        <!-- Flooring Image Gallery -->
+        <h3 class="text-center main-heading">Living Room</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="assets/images/livingroom/IMG_0597.jpg" alt="Image 9" class="gallery-image">
+                    <img src="assets/images/livingroom/fd93ec90-ddc3-4177-941e-9359fb1f8da7.jpg" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/livingroom/f9590f02-ba8f-4db7-9a87-7e6d744da101.jpg" alt="Image 11" class="gallery-image">
+                    <img src="assets/images/livingroom/e1c515ba-7411-426c-aef0-db759ad81fbb.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/livingroom/c8ee426c-0e7d-4013-8f22-e85d701c50f9.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/livingroom/b7f2bedc-2f13-4909-9514-b77acba78cb3.jpg" alt="Image 9" class="gallery-image">
+                    <img src="assets/images/livingroom/0508025f-4aa8-4f85-af97-c3a393903683.jpg" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/livingroom/594d3ee1-6cba-43e0-816d-8161ab08b3db.jpg" alt="Image 11" class="gallery-image">
+                    <img src="assets/images/livingroom/99f59dc0-8499-4d70-8cf4-be90e87eeade.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/livingroom/80baced8-382e-46c2-ac62-4a9b04c03c2e.jpg" alt="Image 12" class="gallery-image">
+
+                    <img src="assets/images/livingroom/074f643c-eb8d-4b4f-a645-a88cbfe92834.jpg" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/livingroom/67dd1a04-682b-4614-a89d-6895c2ec5fe5.jpg" alt="Image 11" class="gallery-image">
+                    <img src="assets/images/livingroom/30f17832-ddf8-4acc-8f0f-70926e8f67d9.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/livingroom/7ea51aa4-5200-4cab-b5e2-ac81a209891a.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/livingroom/7b84c5a3-ccd1-4031-b6cc-d788e4da741f.jpg" alt="Image 9" class="gallery-image">
+                    <img src="assets/images/livingroom/6e99db22-5ca3-4a27-9555-2995a03f8bc8.jpg" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/livingroom/5e389605-315f-4cd4-b03e-632327a9131c.jpg" alt="Image 11" class="gallery-image">
+                    <img src="assets/images/livingroom/4ba452eb-9513-4095-aa2c-878abb237952.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/livingroom/0b3206ed-509c-47f4-b81a-698911059425.jpg" alt="Image 12" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+
+        <!-- TV UNIT Image Gallery -->
+        <h3 class="text-center main-heading">TV Unit</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="assets/images/tvunit/7e1e4aa4-9147-4af7-be5f-debc2f1c66fd.jpg" alt="Image 9" class="gallery-image">
+                    <img src="assets/images/tvunit/9c1c2257-635e-4bf7-95b5-ea6bce379f70.jpg" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/tvunit/26ab1c99-ff85-43aa-844d-112a03b0a72e.jpg" alt="Image 11" class="gallery-image">
+                    <img src="assets/images/tvunit/70cfde77-3631-4711-9b84-b1d1145d1bda.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/tvunit/91ec7403-3e6a-4691-91f9-202a306a7384.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/tvunit/116ccde9-0e2e-4596-bbda-8d2a08b9d2a1.jpg" alt="Image 9" class="gallery-image">
+                    <img src="assets/images/tvunit/417ece24-1ce4-41af-a179-97980bbb0c6a.jpg" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/tvunit/544c0e6d-40db-4f5c-b67b-89ca0f78d670.jpg" alt="Image 11" class="gallery-image">
+                    <img src="assets/images/tvunit/19648a1b-311c-4679-88e9-fb98e1d2a02b.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/tvunit/b6a41d42-554a-4ddd-9609-8465c11f89ce.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/tvunit/c270bb35-0a6e-4839-8b96-7cdd8a8c5451.jpg" alt="Image 9" class="gallery-image">
+                    <img src="assets/images/tvunit/e03e2699-c2c2-4466-af4d-a01047e4298d.jpg" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/tvunit/e49f4368-a83e-40af-8758-3dbcba3e2a37.jpg" alt="Image 11" class="gallery-image">
+                    <img src="assets/images/tvunit/e8479d8b-7909-423f-ab56-1000c696f65d.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/tvunit/f82c3101-45f4-4051-be65-276c7e42e897.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/tvunit/IMG_0603.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/tvunit/IMG_2064.JPG" alt="Image 12" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+
+         <!-- pooja kit Image Gallery -->
+         <h3 class="text-center main-heading">Pooja kit</h3>
+         <div class="image-gallery">
+             <button class="prevButton nav-button">◀</button>
+             <div class="image-container">
+                 <div class="images-wrapper">
+                     <img src="assets/images/poojakit/05d5a617-b15e-4397-b200-c6ff266cbaa5.jpg" alt="Image 9" class="gallery-image">
+                     <img src="assets/images/poojakit/11c6095c-2b61-4467-b72f-612f288de32b.jpg" alt="Image 10" class="gallery-image">
+                     <img src="assets/images/poojakit/e36fc06d-a736-422d-85fb-b56c67c049d8.jpg" alt="Image 11" class="gallery-image">
+                     <img src="assets/images/poojakit/IMG_2209.JPG" alt="Image 12" class="gallery-image">
+                     <img src="assets/images/poojakit/IMG_3734.jpg" alt="Image 12" class="gallery-image">
+                     <img src="assets/images/poojakit/bb6e7afe-1180-4436-86d6-062be20459df.jpg" alt="Image 12" class="gallery-image">
+                 </div>
+             </div>
+             <button class="nextButton nav-button">▶</button>
+         </div>
+
+          <!-- Ceiling Image Gallery -->
+          <h3 class="text-center main-heading">Ceiling</h3>
+          <div class="image-gallery">
+              <button class="prevButton nav-button">◀</button>
+              <div class="image-container">
+                  <div class="images-wrapper">
+                      <img src="assets/images/ceiling/4ba452eb-9513-4095-aa2c-878abb237952.jpg" alt="Image 9" class="gallery-image">
+                      <img src="assets/images/ceiling/5f90e36b-78ce-425e-be1c-22d665194c8f.jpg" alt="Image 10" class="gallery-image">
+                      <img src="assets/images/ceiling/6e99db22-5ca3-4a27-9555-2995a03f8bc8.jpg" alt="Image 11" class="gallery-image">
+                      <img src="assets/images/ceiling/8a9d1805-9212-4322-bdd7-3da071507a58.jpg" alt="Image 12" class="gallery-image">
+                      <img src="assets/images/ceiling/8ac229f1-cd3f-4d0a-9797-8c50f804fe9d.jpg" alt="Image 12" class="gallery-image">
+                      <img src="assets/images/ceiling/8e460566-3fe3-4c0d-9773-b25be4826463.jpg" alt="Image 9" class="gallery-image">
+                      <img src="assets/images/ceiling/30adc4cc-b083-4de7-ac2e-6147ece0d302.jpg" alt="Image 10" class="gallery-image">
+                      <img src="assets/images/ceiling/30f17832-ddf8-4acc-8f0f-70926e8f67d9.jpg" alt="Image 11" class="gallery-image">
+                      <img src="assets/images/ceiling/94d2cd89-82ea-4291-983f-0a9dbb4776d8.jpg" alt="Image 12" class="gallery-image">
+                      <img src="assets/images/ceiling/482d1792-6beb-4cd3-9ffb-aed7ea63ae2e.jpg" alt="Image 12" class="gallery-image">
+                      <img src="assets/images/ceiling/2176c6bd-e446-4fea-933a-ec6cb1bbe95a.jpg" alt="Image 9" class="gallery-image">
+                      <img src="assets/images/ceiling/7558d45c-db8b-4c35-8010-5befe63dc823.jpg" alt="Image 10" class="gallery-image">
+                      <img src="assets/images/ceiling/35491298-b040-4ed7-ac01-119f96586399.jpg" alt="Image 11" class="gallery-image">
+                      <img src="assets/images/ceiling/b3708bea-9b8c-40ce-bb5c-14cb524c26a7.jpg" alt="Image 12" class="gallery-image">
+                      <img src="assets/images/ceiling/f3880740-c5bd-4a19-83a9-e5d8077b34d2.jpg" alt="Image 12" class="gallery-image">
+                      <img src="assets/images/ceiling/IMG_0599.jpg" alt="Image 12" class="gallery-image">
+                      <img src="assets/images/ceiling/IMG_0693.jpg" alt="Image 12" class="gallery-image">
+                      <img src="assets/images/ceiling/IMG_2180.JPG" alt="Image 12" class="gallery-image">
+                     
+                  </div>
+              </div>
+              <button class="nextButton nav-button">▶</button>
+          </div>
+
+           <!-- lighting Image Gallery -->
+         <h3 class="text-center main-heading">Lighting</h3>
+         <div class="image-gallery">
+             <button class="prevButton nav-button">◀</button>
+             <div class="image-container">
+                 <div class="images-wrapper">
+                     <img src="assets/images/lighting/90a6de39fc27a65768044dc61270d6f0.jpg" alt="Image 9" class="gallery-image">
+                     <img src="assets/images/lighting/A designer's guide to selecting the right lighting for your living room.webp" alt="Image 10" class="gallery-image">
+                     <img src="assets/images/lighting/Bamboo-Lampshade-Alpha-Large-300x300.jpeg" alt="Image 11" class="gallery-image">
+                     <img src="assets/images/lighting/cto_anvers_pendant_group_5.webp" alt="Image 12" class="gallery-image">
+                     <img src="assets/images/lighting/images.jpeg" alt="Image 12" class="gallery-image">
+                     <img src="assets/images/lighting/indoor pendants.jpg" alt="Image 9" class="gallery-image">
+                     <img src="assets/images/lighting/lighting-ideas.jpg" alt="Image 10" class="gallery-image">
+                     <img src="assets/images/lighting/loft-solar-eduardo-macarios-2.jpg" alt="Image 11" class="gallery-image">
+                     
+                 </div>
+             </div>
+             <button class="nextButton nav-button">▶</button>
+         </div>
+
+         
+    </div>
+
+    
+
+    
+ 
+
+
+     
+
+      
+
+      
+      <footer>
+        <div class="container">
+            <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="footer-logo">
+              <a href="index.php"><img src="assets/images/logo/logo.webp" /></a>
+            </div>
+            <p class="footer-txt">
+              Here at La’espace, we create spaces that evoke magic through the use of color, pattern, and storytelling.  Our approach is collaborative and hands-on, we listen and love to create a space that truly reflects your life and lifestyle.
+            </p>
+
+          </div>
+
+          <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">
+            <h4 class="footer-heading" style="color: #e45c0c;">Quick Links</h4>
+         
+            <ul>
+              <li>
+                <a href="index.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Home</a
+                >
+              </li>
+              <li>
+                <a href="about.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>About</a
+                >
+              </li>
+             
+              <li>
+                <a href="portfolio.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="contact.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Contact</a
+                >
+              </li>
+             <li>
+              <a href="faq.php"
+                ><i class="bi bi-arrow-right me-2 text-black"></i>Faq</a
+              >
+            </li>
+            
+            </ul>
+
+          </div>
+
+         <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+            <h4 class="footer-heading" style="color: #e45c0c;">Our Services</h4>
+         
+            <ul>
+              <li>
+                <a href="turnkey-projects.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Turnkey Projects</a
+                >
+              </li>
+              <li>
+                <a href="design-consultation.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Design Consultation</a
+                >
+              </li>
+             
+              <li>
+                <a href="spatial-design.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Spatial Design</a
+                >
+              </li>
+              <li>
+                <a href="lighting-consultation.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Lighting Consultations</a
+                >
+              </li>
+             <li>
+              <a href="modular-solutions.php"
+                ><i class="bi bi-arrow-right me-2 text-black"></i>Modular Solutions</a
+              >
+            </li>
+             <li>
+              <a href="revamping.php"
+                ><i class="bi bi-arrow-right me-2 text-black"></i>Revamping</a
+              >
+            </li>
+            </ul>
+
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+            <h4 class="footer-heading" style="color: #e45c0c;">Thinkwalls Global Private Limited</h4>
+            <ul>
+              <li class="address">
+                <i class="bi bi-geo-alt me-2"></i><b class="company-name-heading"></b>133, Siri Arcade, 401, Old Mumbai Hwy, Lumbini Avenue, Gachibowli, Hyderabad, Telangana 500032
+              </li>
+              <li>
+                <a href="mailto:projects@laespace.com"
+                  ><i class="bi bi-envelope me-2"></i>srinteriors@gmail.com</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-telephone me-2"></i
+                ><a href="tel:+919985599655" style="color:#fff !important;">+91  99855 99655</a>
+              </li>
+            </ul>
+            <div class="social">
+              <a href="https://www.facebook.com/laespacedesignstudio?mibextid=kFxxJD" target="_b"><i class="bi bi-facebook"></i></a>
+              <!-- <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a> -->
+              <a href="https://www.instagram.com/studiolaespace/?fbclid=IwAR1Z0oQfiFNVHoCtUgxBlQmEa7Dz3uW1ffcGmXIPwkrE9noH_6YzKQxozXY" target="_b"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>  </div>
+        <div class="row copyright">
+          <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+            © 2024 La'espace Design Studio. All rights reserved. Designed by:
+            <a href="https://www.pcmedia.in/" target="_blank">PENCAP MEDIA</a>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <a href="terms-and-conditions.php"
+                >Terms and conditions</a
+              > &nbsp; | &nbsp;<a href="privacy-policy.php"
+                >Privacy Policy</a
+              >
+          </div>
+        </div>
+    
+    </footer>    
+  </main>
+
+
+  <script>
+    // Function to handle gallery scrolling for a specific gallery
+    function initializeGallery(gallery) {
+        const imagesWrapper = gallery.querySelector('.images-wrapper');
+        const images = gallery.querySelectorAll('.gallery-image');
+        const totalImages = images.length;
+        const imageWidth = images[0].offsetWidth + 10; // Include margin between images
+        let currentIndex = 0;
+        let autoScrollInterval;
+
+        // Function to update the position of the image container
+        function updateImages() {
+            imagesWrapper.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        }
+
+        // Handle next button click
+        gallery.querySelector('.nextButton').addEventListener('click', () => {
+            currentIndex += 1;
+            if (currentIndex >= totalImages - 2) { // Adjust for visible images (2 visible)
+                currentIndex = totalImages - 2;
+            }
+            updateImages();
+        });
+
+        // Handle previous button click
+        gallery.querySelector('.prevButton').addEventListener('click', () => {
+            currentIndex -= 1;
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
+            updateImages();
+        });
+
+        // Auto-scroll function
+        function autoScroll() {
+            currentIndex += 1;
+            if (currentIndex >= totalImages - 2) { // Adjust for visible images
+                currentIndex = 0; // Start again when reaching the end
+            }
+            updateImages();
+        }
+
+        // Start auto-scrolling every 3 seconds
+        autoScrollInterval = setInterval(autoScroll, 3000);
+
+        // Pause auto-scrolling on mouse hover
+        gallery.addEventListener('mouseover', () => {
+            clearInterval(autoScrollInterval);
+        });
+
+        // Resume auto-scrolling when mouse leaves
+        gallery.addEventListener('mouseout', () => {
+            autoScrollInterval = setInterval(autoScroll, 3000);
+        });
+    }
+
+    // Initialize each gallery on the page
+    document.querySelectorAll('.image-gallery').forEach(gallery => {
+        initializeGallery(gallery);
+    });
+</script>
+ 
+
+<script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/script.js"></script>
+    <a href="javascript:void(0);" id="backToTop" class="back-to-top">
+      <i class="arrow"></i><i class="arrow"></i>
+    </a>
+    <a href="javascript:void(0);" id="backToTop" class="back-to-top">
+      <i class="arrow"></i><i class="arrow"></i>
+    </a>
+    <script>
+      $(window).on("load", function () {
+        setTimeout(function () {
+          $(".page-loader").fadeOut("slow");
+          $("html body.page-loader").css("overflow", "hidden");
+        }, 500);
+      });
+
+      $(function () {
+        setTimeout(function () {
+          $("html, body")
+            .css({
+              overflow: "auto",
+            })
+            .animate(
+              {
+                scrollTop: $(".myDiv").offset().top,
+              },
+              500
+            );
+        }, 500);
+      });
+    </script>
+
+<script>
+      $(document).ready(function () {
+        var btn = $("#backToTop");
+        $(window).on("scroll", function () {
+          if ($(window).scrollTop() > 1000) {
+            btn.addClass("show");
+          } else {
+            btn.removeClass("show");
+          }
+        });
+        btn.on("click", function (e) {
+          e.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: 0,
+            },
+            "1000"
+          );
+        });
+      });
+    </script>
+
+
+<script>
+  
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+window.onload = function () {
+  setInterval(function () {
+    plusSlides(1);
+  }, 3000);
+};
+
+</script>
+
+<script>
+  (function ($) {
+  var toggle = $(".nav-toggle");
+
+  toggle.on("click", function (e) {
+    $(this).toggleClass("opened");
+  });
+})(jQuery);
+</script>
+  </body>
+</html>

@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SR-Interiors </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/fav.webp">  </head>
+  <body>
+ 
+
+
+  <main class="bg-pattern">
+  <nav class="navbar navbar-expand-lg navigation navbar-lg" id="Nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img src="assets/images/logo/logo.webp"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#leadUIMainNav"
+            aria-controls="leadUIMainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <div class="nav-toggle">
+              <span class="bar-top"></span>
+              <span class="bar-mid"></span>
+              <span class="bar-bot"></span>
+            </div>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="leadUIMainNav"
+          >
+            <ul class="navbar-nav ml-auto mt-lg-0">
+              <li class="nav-item nav-list">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+
+              <li class="nav-item nav-list">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            
+              <li class="nav-item dropdown nav-list">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+         <!-- <a class="dropdown-item" href="residential.php">Residential</a>
+          <a class="dropdown-item" href="commercial.php">Commercial</a>-->
+          <a class="dropdown-item" href="turnkey-projects.php">Turnkey Projects</a>
+          <a class="dropdown-item" href="design-consultation.php">Design Consultation</a>
+           <a class="dropdown-item" href="spatial-design.php">Spatial Design</a>
+            <a class="dropdown-item" href="lighting-consultation.php">Lighting Consultation</a>
+             <a class="dropdown-item" href="modular-solutions.php">Modular Solutions</a>
+              <a class="dropdown-item" href="revamping.php">Revamping</a>
+        </div>
+      </li>
+              <li class="nav-item nav-list">
+                <a class="nav-link" href="portfolio.php">Portfolio</a>
+              </li  <li class="nav-item nav-list">
+               
+  <li class="nav-item nav-list">
+                <a class="nav-link" href="blog.php">Blog</a>
+              </li>
+              <li class="nav-item nav-list">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item nav-btn">
+                <div class="btn-outer">
+                  <a class="btn-inner" href="tel:+919985599655"
+                    >Call Us!<br />
+                    <div>+91 99855 99655</div>
+                   </a>
+                </div>
+              </li>
+
+              <li class="nav-item nav-btn">
+                <div class="btn-outer">
+                  <a class="btn-inner" href="mailto:projects@laespace.com"
+                    >Mail Us!<br />
+                    <div>projects@laespace.com</div></a
+                  >
+                </div>
+              </li>
+
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <section class="breadcrumb-section">
+        <img src="assets/images/3d/b34.webp" class="breadcrumb-section-img" />
+        <div class="bread-txt">
+          <h1>Contact Us</h1>
+        </div>
+       
+      </section>
+
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            /* max-width: 800px; */
+            margin: auto;
+            text-align: center;
+        }
+
+        .main-heading {
+            margin-bottom: 10px;
+            color: #D49826;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .sub-heading {
+            margin-bottom: 20px;
+            color: #EDBE6C;
+        }
+
+        .image-gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .image-container {
+            overflow: hidden;
+            width: 80%;
+        }
+
+        .images-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-image {
+            width: 260px;
+            height: auto;
+            margin: 5px;
+            flex-shrink: 0;
+        }
+
+        .nav-button {
+            background-color: #EDBE6C;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .prevButton {
+            left: 10px;
+        }
+
+        .nextButton {
+            right: 10px;
+        }
+
+        .nav-button:hover {
+            background-color: #EDBE6C;
+        }
+    </style>
+      <div class="container"></div>
+       
+        <h2 class="sub-heading text-center mt-3">Commercial Services</h2>
+
+        <!-- Ceiling Image Gallery -->
+        <h3 class="text-center main-heading">Hospitals</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="assets/images/commercial-hospitals/wjskpfnujr_orig.jpg" alt="Image 1" class="gallery-image">
+                    <img src="assets/images/commercial-hospitals/Proj_132282108680206135.jpg" alt="Image 2" class="gallery-image">
+                    <img src="assets/images/commercial-hospitals/photo-1710074213379-2a9c2653046a.jpeg" alt="Image 3" class="gallery-image">
+                    <img src="assets/images/commercial-hospitals/Medical-Clinic-Interior-Design-Ideas-Medical-Fitouts-ImpeccaBuild-3-scaled.jpg" alt="Image 4" class="gallery-image">
+                    <img src="assets/images/commercial-hospitals/Luxury-Room.jpg" alt="Image 4" class="gallery-image">
+                    <img src="assets/images/commercial-hospitals/IMG_0325-1.webp" alt="Image 2" class="gallery-image">
+                    <img src="assets/images/commercial-hospitals/hospital-interior-designers.jpg" alt="Image 3" class="gallery-image">
+                    <img src="assets/images/commercial-hospitals/24-bed-modular-ward-increases-hospital-capacity-1-1024x683.jpg" alt="Image 4" class="gallery-image">
+                   
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+        <!-- Lighting Image Gallery -->
+        <h3 class="text-center main-heading">Office</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="assets/images/commercial-office/shell-lubricant-01.jpg" alt="Image 5" class="gallery-image">
+                    <img src="assets/images/commercial-office/pexels-pixabay-263209.jpg" alt="Image 6" class="gallery-image">
+                    <img src="assets/images/commercial-office/petr-magera-Ugnm0F4e00U-unsplash-scaled-1920x1024.jpg" alt="Image 7" class="gallery-image">
+                    <img src="assets/images/commercial-office/Office-Interior-Design.jpg" alt="Image 8" class="gallery-image">
+                    <img src="assets/images/commercial-office/office_designs_in_Delhi.webp" alt="Image 8" class="gallery-image">
+                    <img src="assets/images/commercial-office/empty-room-with-chairs-desks.jpg" alt="Image 5" class="gallery-image">
+                    <img src="assets/images/commercial-office/director-cabin-interior.webp" alt="Image 6" class="gallery-image">
+                    <img src="assets/images/commercial-office/banner5.jpg" alt="Image 7" class="gallery-image">
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+        <!-- Flooring Image Gallery -->
+        <h3 class="text-center main-heading">Cafes</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="assets/images/cafes/360_F_148438488_OS5BbSzQqxqQbAh92lHARFVjNJli9ziO.jpg" alt="Image 9" class="gallery-image">
+                    <img src="assets/images/cafes/360_F_579805285_je4O2ew15xYK2rOKmm7I629z7NpVMOgB.jpg" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/cafes/867db7ecdb6bfdcd2bbd2804fa9647bf.jpg" alt="Image 11" class="gallery-image">
+                    <img src="assets/images/cafes/212173632-interior-de-una-cafetería-moderna-con-sillas-y-mesas-en-tonos-naranjas.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/cafes/Love-That-Design-Peixoto-Coffee-Gilbert-3-scaled.webp" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/cafes/SD_Banner_Web.webp" alt="Image 9" class="gallery-image">
+                   
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+
+        <!-- TV UNIT Image Gallery -->
+        <h3 class="text-center main-heading">Restarents</h3>
+        <div class="image-gallery">
+            <button class="prevButton nav-button">◀</button>
+            <div class="image-container">
+                <div class="images-wrapper">
+                    <img src="assets/images/restarents/7-roomstyler-3d-1564309209.jpeg" alt="Image 9" class="gallery-image">
+                    <img src="assets/images/restarents/bde9d4da4dd17831ae9e2e3dd383e704.jpg" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/restarents/cozy-luxury-interior-restaurant-comfortable-modern-dining-place-contemporary-design-background-3d-rendering_295714-3464.avif" alt="Image 11" class="gallery-image">
+                    <img src="assets/images/restarents/cozy-luxury-interior-restaurant-comfortable-modern-dining-place-contemporary-design-background-3d-rendering_295714-3505.avif" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/restarents/dining-room-design-for-your-home.jpg" alt="Image 12" class="gallery-image">
+                    <img src="assets/images/restarents/dining-room-interior-designing-service-500x500.webp" alt="Image 9" class="gallery-image">
+                    <img src="assets/images/restarents/modern-conceptual-interior-design-restaurant-is-contemporary-style-with-classic-elements-3d-rendering_295714-3453.avif" alt="Image 10" class="gallery-image">
+                    <img src="assets/images/restarents/modern-conceptual-interior-design-restaurant-is-contemporary-style-with-classic-elements-3d-rendering_295714-3461.avif" alt="Image 11" class="gallery-image">
+                  
+                </div>
+            </div>
+            <button class="nextButton nav-button">▶</button>
+        </div>
+
+
+         <!-- pooja kit Image Gallery -->
+         <h3 class="text-center main-heading h">Saloons</h3>
+         <div class="image-gallery">
+             <button class="prevButton nav-button">◀</button>
+             <div class="image-container">
+                 <div class="images-wrapper">
+                     <img src="assets/images/saloons/1-small-salon-interior-design-.jpg" alt="Image 9" class="gallery-image">
+                     <img src="assets/images/saloons/9d49ff8a6e7fa1706523543752a8a1d3.jpg" alt="Image 10" class="gallery-image">
+                     <img src="assets/images/saloons/6299d11bde8c647225da5125_6-salon-interior-design-tips-for-2022.png" alt="Image 11" class="gallery-image">
+                     <img src="assets/images/saloons/images.jpeg" alt="Image 12" class="gallery-image">
+                     <img src="assets/images/saloons/salon-interior-design-service-500x500.webp" alt="Image 12" class="gallery-image">
+                     <img src="assets/images/saloons/Viki-Thakkar_-salon-interior-design_epxvbh.jpg" alt="Image 12" class="gallery-image">
+                 </div>
+             </div>
+             <button class="nextButton nav-button">▶</button>
+         </div>
+
+         <style>
+         .h {
+    font-size: 10rem;
+    background: url('/images/yt-shorts3.jpg') no-repeat center;
+    background-size:cover;
+    -webkit-background-clip: text;
+    /* -webkit-text-stroke-width: 5rem; */
+    -webkit-text-fill-color: transparent; 
+    /* color: rgba(255, 255, 255, 0.5);  */
+}
+         </style>
+
+          
+         
+    </div>
+
+    
+
+    
+ 
+
+
+     
+
+      
+
+      
+      <footer>
+        <div class="container">
+            <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="footer-logo">
+              <a href="index.php"><img src="assets/images/logo/logo.webp" /></a>
+            </div>
+            <p class="footer-txt">
+              Here at La’espace, we create spaces that evoke magic through the use of color, pattern, and storytelling.  Our approach is collaborative and hands-on, we listen and love to create a space that truly reflects your life and lifestyle.
+            </p>
+
+          </div>
+
+          <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">
+            <h4 class="footer-heading" style="color: #e45c0c;">Quick Links</h4>
+         
+            <ul>
+              <li>
+                <a href="index.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Home</a
+                >
+              </li>
+              <li>
+                <a href="about.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>About</a
+                >
+              </li>
+             
+              <li>
+                <a href="portfolio.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="contact.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Contact</a
+                >
+              </li>
+             <li>
+              <a href="faq.php"
+                ><i class="bi bi-arrow-right me-2 text-black"></i>Faq</a
+              >
+            </li>
+            
+            </ul>
+
+          </div>
+
+         <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+            <h4 class="footer-heading" style="color: #e45c0c;">Our Services</h4>
+         
+            <ul>
+              <li>
+                <a href="turnkey-projects.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Turnkey Projects</a
+                >
+              </li>
+              <li>
+                <a href="design-consultation.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Design Consultation</a
+                >
+              </li>
+             
+              <li>
+                <a href="spatial-design.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Spatial Design</a
+                >
+              </li>
+              <li>
+                <a href="lighting-consultation.php"
+                  ><i class="bi bi-arrow-right me-2 text-black"></i>Lighting Consultations</a
+                >
+              </li>
+             <li>
+              <a href="modular-solutions.php"
+                ><i class="bi bi-arrow-right me-2 text-black"></i>Modular Solutions</a
+              >
+            </li>
+             <li>
+              <a href="revamping.php"
+                ><i class="bi bi-arrow-right me-2 text-black"></i>Revamping</a
+              >
+            </li>
+            </ul>
+
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+            <h4 class="footer-heading" style="color: #e45c0c;">Thinkwalls Global Private Limited</h4>
+            <ul>
+              <li class="address">
+                <i class="bi bi-geo-alt me-2"></i><b class="company-name-heading"></b>133, Siri Arcade, 401, Old Mumbai Hwy, Lumbini Avenue, Gachibowli, Hyderabad, Telangana 500032
+              </li>
+              <li>
+                <a href="mailto:projects@laespace.com"
+                  ><i class="bi bi-envelope me-2"></i>srinteriors@gmail.com</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-telephone me-2"></i
+                ><a href="tel:+919985599655" style="color:#fff !important;">+91  99855 99655</a>
+              </li>
+            </ul>
+            <div class="social">
+              <a href="https://www.facebook.com/laespacedesignstudio?mibextid=kFxxJD" target="_b"><i class="bi bi-facebook"></i></a>
+              <!-- <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a> -->
+              <a href="https://www.instagram.com/studiolaespace/?fbclid=IwAR1Z0oQfiFNVHoCtUgxBlQmEa7Dz3uW1ffcGmXIPwkrE9noH_6YzKQxozXY" target="_b"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>  </div>
+        <div class="row copyright">
+          <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+            © 2024 La'espace Design Studio. All rights reserved. Designed by:
+            <a href="https://www.pcmedia.in/" target="_blank">PENCAP MEDIA</a>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <a href="terms-and-conditions.php"
+                >Terms and conditions</a
+              > &nbsp; | &nbsp;<a href="privacy-policy.php"
+                >Privacy Policy</a
+              >
+          </div>
+        </div>
+    
+    </footer>    
+  </main>
+
+
+  <script>
+    // Function to handle gallery scrolling for a specific gallery
+    function initializeGallery(gallery) {
+        const imagesWrapper = gallery.querySelector('.images-wrapper');
+        const images = gallery.querySelectorAll('.gallery-image');
+        const totalImages = images.length;
+        const imageWidth = images[0].offsetWidth + 10; // Include margin between images
+        let currentIndex = 0;
+        let autoScrollInterval;
+
+        // Function to update the position of the image container
+        function updateImages() {
+            imagesWrapper.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        }
+
+        // Handle next button click
+        gallery.querySelector('.nextButton').addEventListener('click', () => {
+            currentIndex += 1;
+            if (currentIndex >= totalImages - 2) { // Adjust for visible images (2 visible)
+                currentIndex = totalImages - 2;
+            }
+            updateImages();
+        });
+
+        // Handle previous button click
+        gallery.querySelector('.prevButton').addEventListener('click', () => {
+            currentIndex -= 1;
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
+            updateImages();
+        });
+
+        // Auto-scroll function
+        function autoScroll() {
+            currentIndex += 1;
+            if (currentIndex >= totalImages - 2) { // Adjust for visible images
+                currentIndex = 0; // Start again when reaching the end
+            }
+            updateImages();
+        }
+
+        // Start auto-scrolling every 3 seconds
+        autoScrollInterval = setInterval(autoScroll, 3000);
+
+        // Pause auto-scrolling on mouse hover
+        gallery.addEventListener('mouseover', () => {
+            clearInterval(autoScrollInterval);
+        });
+
+        // Resume auto-scrolling when mouse leaves
+        gallery.addEventListener('mouseout', () => {
+            autoScrollInterval = setInterval(autoScroll, 3000);
+        });
+    }
+
+    // Initialize each gallery on the page
+    document.querySelectorAll('.image-gallery').forEach(gallery => {
+        initializeGallery(gallery);
+    });
+</script>
+ 
+
+<script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/script.js"></script>
+    <a href="javascript:void(0);" id="backToTop" class="back-to-top">
+      <i class="arrow"></i><i class="arrow"></i>
+    </a>
+    <a href="javascript:void(0);" id="backToTop" class="back-to-top">
+      <i class="arrow"></i><i class="arrow"></i>
+    </a>
+    <script>
+      $(window).on("load", function () {
+        setTimeout(function () {
+          $(".page-loader").fadeOut("slow");
+          $("html body.page-loader").css("overflow", "hidden");
+        }, 500);
+      });
+
+      $(function () {
+        setTimeout(function () {
+          $("html, body")
+            .css({
+              overflow: "auto",
+            })
+            .animate(
+              {
+                scrollTop: $(".myDiv").offset().top,
+              },
+              500
+            );
+        }, 500);
+      });
+    </script>
+
+<script>
+      $(document).ready(function () {
+        var btn = $("#backToTop");
+        $(window).on("scroll", function () {
+          if ($(window).scrollTop() > 1000) {
+            btn.addClass("show");
+          } else {
+            btn.removeClass("show");
+          }
+        });
+        btn.on("click", function (e) {
+          e.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: 0,
+            },
+            "1000"
+          );
+        });
+      });
+    </script>
+
+
+<script>
+  
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+window.onload = function () {
+  setInterval(function () {
+    plusSlides(1);
+  }, 3000);
+};
+
+</script>
+
+<script>
+  (function ($) {
+  var toggle = $(".nav-toggle");
+
+  toggle.on("click", function (e) {
+    $(this).toggleClass("opened");
+  });
+})(jQuery);
+</script>
+  </body>
+</html>
