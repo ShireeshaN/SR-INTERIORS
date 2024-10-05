@@ -3,191 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>Gallery with Lightbox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+
+    <div class="gallery">
+        <a href="images/h-bnrs.jpg" data-lightbox="project-gallery" data-title="Project Image 1">
+            <img src="images/h-bnrs.jpg" alt="Project Image 1" class="gallery-img">
+        </a>
+        <a href="images/port-slider-large-5.jpg" data-lightbox="project-gallery" data-title="Project Image 2">
+            <img src="images/port-slider-large-5.jpg" alt="Project Image 2" class="gallery-img">
+        </a>
+        <a href="images/h-bnrs.jpg" data-lightbox="project-gallery" data-title="Project Image 3">
+            <img src="images/h-bnrs.jpg" alt="Project Image 3" class="gallery-img">
+        </a>
+        <a href="images/h-bnrs.jpg" data-lightbox="project-gallery" data-title="Project Image 1">
+            <img src="images/h-bnrs.jpg" alt="Project Image 1" class="gallery-img">
+        </a>
+        <a href="images/port-slider-large-5.jpg" data-lightbox="project-gallery" data-title="Project Image 2">
+            <img src="images/port-slider-large-5.jpg" alt="Project Image 2" class="gallery-img">
+        </a>
+        <a href="images/h-bnrs.jpg" data-lightbox="project-gallery" data-title="Project Image 3">
+            <img src="images/h-bnrs.jpg" alt="Project Image 3" class="gallery-img">
+        </a>
+        <a href="images/h-bnrs.jpg" data-lightbox="project-gallery" data-title="Project Image 1">
+            <img src="images/h-bnrs.jpg" alt="Project Image 1" class="gallery-img">
+        </a>
+        <a href="images/port-slider-large-5.jpg" data-lightbox="project-gallery" data-title="Project Image 2">
+            <img src="images/port-slider-large-5.jpg" alt="Project Image 2" class="gallery-img">
+        </a>
+        <a href="images/h-bnrs.jpg" data-lightbox="project-gallery" data-title="Project Image 3">
+            <img src="images/h-bnrs.jpg" alt="Project Image 3" class="gallery-img">
+        </a>
+    </div>
+
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
+            background-color: #f4f4f4;
             padding: 20px;
         }
 
-        .container {
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+            gap: 20px; /* Spacing between images */
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05); /* Slight zoom animation */
+        }
+
+        a {
             text-align: center;
         }
-
-        .main-heading {
-            margin-bottom: 10px;
-        }
-
-        .sub-heading {
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .image-gallery {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .image-container {
-            overflow: hidden;
-            width: 80%;
-        }
-
-        .images-wrapper {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-image {
-            width: 250px;
-            height: auto;
-            margin: 5px;
-            flex-shrink: 0;
-        }
-
-        .nav-button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-        }
-
-        .prevButton {
-            left: 10px;
-        }
-
-        .nextButton {
-            right: 10px;
-        }
-
-        .nav-button:hover {
-            background-color: #0056b3;
-        }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1 class="main-heading">Image Gallery</h1>
-        <h2 class="sub-heading">Scroll Through Amazing Pictures</h2>
 
-        <!-- Ceiling Image Gallery -->
-        <h3>Ceiling</h3>
-        <div class="image-gallery">
-            <button class="prevButton nav-button">◀</button>
-            <div class="image-container">
-                <div class="images-wrapper">
-                    <img src="images/design-img3.jpg" alt="Image 1" class="gallery-image">
-                    <img src="images/living-room-2155376_1920.jpg" alt="Image 2" class="gallery-image">
-                    <img src="images/design-img3.jpg" alt="Image 3" class="gallery-image">
-                    <img src="images/living-room-2155376_1920.jpg" alt="Image 4" class="gallery-image">
-                </div>
-            </div>
-            <button class="nextButton nav-button">▶</button>
-        </div>
-
-        <!-- Lighting Image Gallery -->
-        <h3>Lighting</h3>
-        <div class="image-gallery">
-            <button class="prevButton nav-button">◀</button>
-            <div class="image-container">
-                <div class="images-wrapper">
-                    <img src="images/design-img3.jpg" alt="Image 5" class="gallery-image">
-                    <img src="images/living-room-2155376_1920.jpg" alt="Image 6" class="gallery-image">
-                    <img src="images/design-img3.jpg" alt="Image 7" class="gallery-image">
-                    <img src="images/living-room-2155376_1920.jpg" alt="Image 8" class="gallery-image">
-                </div>
-            </div>
-            <button class="nextButton nav-button">▶</button>
-        </div>
-
-        <!-- Flooring Image Gallery -->
-        <h3>Flooring</h3>
-        <div class="image-gallery">
-            <button class="prevButton nav-button">◀</button>
-            <div class="image-container">
-                <div class="images-wrapper">
-                    <img src="images/design-img3.jpg" alt="Image 9" class="gallery-image">
-                    <img src="images/living-room-2155376_1920.jpg" alt="Image 10" class="gallery-image">
-                    <img src="images/design-img3.jpg" alt="Image 11" class="gallery-image">
-                    <img src="images/living-room-2155376_1920.jpg" alt="Image 12" class="gallery-image">
-                </div>
-            </div>
-            <button class="nextButton nav-button">▶</button>
-        </div>
-    </div>
-
-    <script>
-        // Function to handle gallery scrolling for a specific gallery
-        function initializeGallery(gallery) {
-            const imagesWrapper = gallery.querySelector('.images-wrapper');
-            const images = gallery.querySelectorAll('.gallery-image');
-            const totalImages = images.length;
-            const imageWidth = images[0].offsetWidth + 10; // Include margin between images
-            let currentIndex = 0;
-            let autoScrollInterval;
-
-            // Function to update the position of the image container
-            function updateImages() {
-                imagesWrapper.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-            }
-
-            // Handle next button click
-            gallery.querySelector('.nextButton').addEventListener('click', () => {
-                currentIndex += 1;
-                if (currentIndex >= totalImages - 2) { // Adjust for visible images (2 visible)
-                    currentIndex = totalImages - 2;
-                }
-                updateImages();
-            });
-
-            // Handle previous button click
-            gallery.querySelector('.prevButton').addEventListener('click', () => {
-                currentIndex -= 1;
-                if (currentIndex < 0) {
-                    currentIndex = 0;
-                }
-                updateImages();
-            });
-
-            // Auto-scroll function
-            function autoScroll() {
-                currentIndex += 1;
-                if (currentIndex >= totalImages - 2) { // Adjust for visible images
-                    currentIndex = 0; // Start again when reaching the end
-                }
-                updateImages();
-            }
-
-            // Start auto-scrolling every 3 seconds
-            autoScrollInterval = setInterval(autoScroll, 3000);
-
-            // Pause auto-scrolling on mouse hover
-            gallery.addEventListener('mouseover', () => {
-                clearInterval(autoScrollInterval);
-            });
-
-            // Resume auto-scrolling when mouse leaves
-            gallery.addEventListener('mouseout', () => {
-                autoScrollInterval = setInterval(autoScroll, 3000);
-            });
-        }
-
-        // Initialize each gallery on the page
-        document.querySelectorAll('.image-gallery').forEach(gallery => {
-            initializeGallery(gallery);
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
