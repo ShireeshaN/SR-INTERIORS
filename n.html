@@ -1,0 +1,134 @@
+<div class="custom-section-proj">
+    <div class="left-side-proj">
+        <h2>Your Heading Here</h2>
+        <p>Your text here explaining the images or the section.</p>
+    </div>
+    <div class="right-side-proj">
+        <div class="image-container-proj">
+            <img src="images/tst-bg.jpg" alt="Image 1" class="image-proj" />
+            <img src="images/Reception-2-scaled.jpg" alt="Image 2" class="image-proj" />
+            <img src="images/tst-bg.jpg" alt="Image 3" class="image-proj" />
+            <img src="images/Reception-2-scaled.jpg" alt="Image 4" class="image-proj" />
+            <img src="images/tst-bg.jpg" alt="Image 5" class="image-proj" />
+            <img src="images/Reception-2-scaled.jpg" alt="Image 6" class="image-proj" />
+            <img src="images/tst-bg.jpg" alt="Image 7" class="image-proj" />
+            <img src="images/Reception-2-scaled.jpg" alt="Image 8" class="image-proj" />
+            <div class="image-text-proj">Your Image Text Here</div> <!-- Added text container -->
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .custom-section-proj {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.left-side-proj {
+    flex: 1;
+    padding-top: 100px;
+}
+
+.right-side-proj {
+    flex: 1;
+    position: relative;
+    height: 400px; /* Set a height for the images */
+    overflow: hidden; /* Hide overflow */
+    width: 300px;
+}
+
+.image-container-proj {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-proj {
+    display: none; /* Initially hide images */
+    max-width: 80%;
+    height: auto;
+}
+
+.image-text-proj {
+    position: absolute;
+    bottom: 10px; /* Adjusts the vertical position */
+    left: 100px; /* Adjusts the horizontal position */
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners for text background */
+    font-size: 16px; /* Font size */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .custom-section-proj {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements */
+    }
+
+    .left-side-proj {
+        text-align: center; /* Center text for mobile */
+        margin-bottom: 20px; /* Add space below the text */
+    }
+
+    .right-side-proj {
+        height: auto; /* Allow height to adjust for images */
+    }
+
+    .image-proj {
+        display: none; /* Initially hide images */
+        max-width: 100%; /* Ensure images fit the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+</style>
+<script>
+    let currentIndex = 0;
+const images = document.querySelectorAll('.image-proj');
+const textContainer = document.querySelector('.image-text-proj');
+
+// Array of texts corresponding to each image
+const texts = [
+    "Text for Image 1",
+    "Text for Image 2",
+    "Text for Image 3",
+    "Text for Image 4",
+    "Text for Image 5",
+    "Text for Image 6",
+    "Text for Image 7",
+    "Text for Image 8"
+];
+
+function showNextImage() {
+    // Hide the current image
+    images[currentIndex].style.display = 'none';
+    
+    // Move to the next index
+    currentIndex = (currentIndex + 1) % images.length;
+    
+    // Show the next image
+    images[currentIndex].style.display = 'block';
+    
+    // Update the text based on the current index
+    textContainer.textContent = texts[currentIndex];
+}
+
+// Initialize the first image and text
+images[currentIndex].style.display = 'block';
+textContainer.textContent = texts[currentIndex];
+
+// Change images every 3 seconds
+setInterval(showNextImage, 3000);
+
+</script>
