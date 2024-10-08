@@ -2276,7 +2276,8 @@ p{text-align:center;}
 /* Add a background color to the active dot/circle */
 .active,
 .dot:hover {
-  background-color: #e45c0c;
+  background-color: #e9e4d9;
+ 
 }
 
 /* Add an italic font style to all quotes */
