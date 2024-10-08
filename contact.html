@@ -37,87 +37,145 @@
 
 
   <main class="bg-pattern">
-  <nav class="navbar navbar-expand-lg navigation navbar-lg" id="Nav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><img src="assets/images/logo/logo.webp"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#leadUIMainNav"
-            aria-controls="leadUIMainNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <div class="nav-toggle">
-              <span class="bar-top"></span>
-              <span class="bar-mid"></span>
-              <span class="bar-bot"></span>
-            </div>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="leadUIMainNav"
-          >
-            <ul class="navbar-nav ml-auto mt-lg-0">
-              <li class="nav-item nav-list">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
+ 
+<div class="top-bar">
+  <div class="contact-info">
+    <a href="mailto:yourmail@example.com">
+      <i class="fas fa-envelope text-dark"></i> sr@interiors.com
+    </a> |
+    <a href="tel:+1234567890">
+      <i class="fas fa-phone text-dark"></i> +91 9963043888
+    </a>
+  </div>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
 
-              <li class="nav-item nav-list">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-            
-              <li class="nav-item dropdown nav-list">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Services
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         <!-- <a class="dropdown-item" href="residential.php">Residential</a>
-          <a class="dropdown-item" href="commercial.php">Commercial</a>-->
-          <a class="dropdown-item" href="turnkey-projects.php">Turnkey Projects</a>
-          <a class="dropdown-item" href="design-consultation.php">Design Consultation</a>
-           <a class="dropdown-item" href="spatial-design.php">Spatial Design</a>
-            <a class="dropdown-item" href="lighting-consultation.php">Lighting Consultation</a>
-             <a class="dropdown-item" href="modular-solutions.php">Modular Solutions</a>
-              <a class="dropdown-item" href="revamping.php">Revamping</a>
-        </div>
-      </li>
-              <li class="nav-item nav-list">
-                <a class="nav-link" href="portfolio.php">Portfolio</a>
-              </li  <li class="nav-item nav-list">
-               
-  <li class="nav-item nav-list">
-                <a class="nav-link" href="blog.php">Blog</a>
-              </li>
-              <li class="nav-item nav-list">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item nav-btn">
-                <div class="btn-outer">
-                  <a class="btn-inner" href="tel:+919985599655"
-                    >Call Us!<br />
-                    <div>+91 99855 99655</div>
-                   </a>
-                </div>
-              </li>
+<style>
+  .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
 
-              <li class="nav-item nav-btn">
-                <div class="btn-outer">
-                  <a class="btn-inner" href="mailto:projects@laespace.com"
-                    >Mail Us!<br />
-                    <div>projects@laespace.com</div></a
-                  >
-                </div>
-              </li>
+.contact-info a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #D19A23;
+  padding-inline: 1rem;
+}
 
-              
-            </ul>
+
+
+.contact-info i {
+  margin-right: 5px; /* Adds space between the icon and text */
+}
+
+.social-icons a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #D19A23;
+  padding-inline: 0.5rem;
+
+}
+
+.social-icons a:hover {
+  color: black;
+}
+
+/* Style for Font Awesome icons */
+.social-icons i {
+  font-size: 13px;
+}
+
+.contact-info i {
+  font-size: 16px;
+}
+
+/* Mobile lo hide cheyyadam (max-width: 768px) */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+</style>
+
+
+
+<nav class="navbar navbar-expand-lg navigation navbar-lg" id="Nav">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img class="logos" src="assets/images/logo/3.png" alt="Logo"/>
+    </a>
+
+    <!-- Hamburger Menu Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#leadUIMainNav"
+      aria-controls="leadUIMainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <div class="nav-toggle">
+        <span class="bar-top"></span>
+        <span class="bar-mid"></span>
+        <span class="bar-bot"></span>
+      </div>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="leadUIMainNav">
+      <ul class="navbar-nav ml-auto mt-lg-0">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+
+        <!-- About Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <!-- Services Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="residential-services.html">Residential</a>
+            <a class="dropdown-item" href="commercial-services.html">Commercial</a>
+            <a class="dropdown-item" href="renovation-services.html">Renovation</a>
           </div>
-        </div>
-      </nav>
+        </li>
+
+        <!-- Projects Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="project.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="packages.html">Packages</a>
+        </li>
+
+        <!-- Contact Link -->
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 
       <section class="breadcrumb-section">
