@@ -2113,12 +2113,14 @@
       display: none;
       margin-top: 20px;
       width: 100%;
-      max-width: 1000px;
+      /* max-width: 1000px; */
   }
 
   .tab-content.active {
       display: flex;
       justify-content: space-around;
+      padding-inline: 2rem;
+      gap: 1rem;
   }
 
   /* Package Box Styles */
@@ -2164,26 +2166,33 @@
 <script>
   // JavaScript to handle tab switching
   document.addEventListener('DOMContentLoaded', function () {
-      const tabs = document.querySelectorAll('.tab');
-      const tabContents = document.querySelectorAll('.tab-content');
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+  
+    // Set the first tab and its content as active by default
+    if (tabs.length > 0 && tabContents.length > 0) {
+        tabs[0].classList.add('active');
+        tabContents[0].classList.add('active');
+    }
+  
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            // Remove active class from all tabs
+            tabs.forEach(tab => tab.classList.remove('active'));
 
-      tabs.forEach(tab => {
-          tab.addEventListener('click', function () {
-              // Remove active class from all tabs
-              tabs.forEach(tab => tab.classList.remove('active'));
+            // Hide all tab contents
+            tabContents.forEach(content => content.classList.remove('active'));
 
-              // Hide all tab contents
-              tabContents.forEach(content => content.classList.remove('active'));
+            // Add active class to clicked tab
+            this.classList.add('active');
 
-              // Add active class to clicked tab
-              this.classList.add('active');
+            // Show the corresponding tab content
+            const tabContentId = this.getAttribute('data-tab');
+            document.getElementById(tabContentId).classList.add('active');
+        });
+    });
+});
 
-              // Show the corresponding tab content
-              const tabContentId = this.getAttribute('data-tab');
-              document.getElementById(tabContentId).classList.add('active');
-          });
-      });
-  });
 </script>
 
  

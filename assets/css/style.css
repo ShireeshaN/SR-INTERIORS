@@ -2276,7 +2276,7 @@ p{text-align:center;}
 /* Add a background color to the active dot/circle */
 .active,
 .dot:hover {
-  background-color: #e9e4d9;
+  /* background-color: #e9e4d9; */
  
 }
 
