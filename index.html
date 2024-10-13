@@ -316,7 +316,7 @@
       </div>
       <div class="scroll-item">
         <img src="images/livingrooms/18.png" alt="Image 2">
-        <div class="text-overlay">Home is where the living room is</div>
+       <a href="residential-services.html"> <div class="text-overlay">Home is where the living room is</div></a>
       </div>
       <div class="scroll-item">
         <img src="images/residence/kitchensss/11.png" alt="Image 3">
@@ -1300,7 +1300,7 @@
 
   /* Fixed background section */
   .fixed-background-part {
-      background-image: url('images/tst-bg.jpg');
+      background-image: url('images/msns.jpg');
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
@@ -1591,6 +1591,277 @@
     }
   }
 </style>
+
+
+
+
+
+<!-- Gallery -->
+<div class="gallery-container container-gal mt-5">
+  <div class="gallery-header">
+    <h2 class="gallery-title pb-3">Our Gallery</h2>
+  </div>
+  <div class="gallery-image-container">
+    <div class="gallery-image-row" id="row1">
+      <img src="images/livingrooms/2.png" alt="Image 1">
+      <img src="images/pooja units/3.png" alt="Image 2">
+      <img src="images/residence/kitchensss/3.png" alt="Image 3">
+    </div>
+    <div class="gallery-image-row" id="row2">
+      <img src="images/tvunits/9.png" alt="Image 4">
+      <img src="images/wordrobes/6.png" alt="Image 5">
+      <img src="images/wordrobes/13.png" alt="Image 6">
+    </div>
+    <div class="gallery-image-row" id="row3">
+      <img src="images/tvunits/9.png" alt="Image 7">
+      <img src="images/wordrobes/6.png" alt="Image 8">
+      <img src="images/wordrobes/13.png" alt="Image 9">
+    </div>
+    <div class="gallery-image-row" id="row4">
+      <img src="images/tvunits/9.png" alt="Image 10">
+      <img src="images/wordrobes/6.png" alt="Image 11">
+      <img src="images/wordrobes/13.png" alt="Image 12">
+    </div>
+    <div class="gallery-image-row" id="row5">
+      <img src="images/tvunits/9.png" alt="Image 13">
+      <img src="images/wordrobes/6.png" alt="Image 14">
+      <img src="images/wordrobes/13.png" alt="Image 15">
+    </div>
+  </div>
+
+  <!-- Pagination (Bubbles and Arrows) -->
+  <div class="gallery-pagination">
+    <span class="gallery-arrow left">&#8249;</span>
+    <span class="gallery-bubble active" data-set="1">1</span>
+    <span class="gallery-bubble" data-set="2">2</span>
+    <span class="gallery-bubble" data-set="3">3</span>
+    <span class="gallery-bubble" data-set="4">4</span>
+    <span class="gallery-bubble" data-set="5">5</span>
+    <span class="gallery-arrow right">&#8250;</span>
+  </div>
+</div>
+
+<!-- Gallery Modal for Zooming -->
+<div class="gallery-modal" id="modal">
+  <div class="gallery-modal-content">
+    <span class="gallery-close" id="closeModal">&times;</span>
+    <img id="zoomedImage" src="" alt="Zoomed Image">
+    <span class="gallery-arrow left" id="modalLeft">&#8249;</span>
+    <span class="gallery-arrow right" id="modalRight">&#8250;</span>
+
+  </div>
+</div>
+
+<script>
+  const imageSets = {
+    1: ['images/livingrooms/2.png', 'images/pooja units/3.png', 'images/residence/kitchensss/3.png'],
+    2: ['images/tvunits/9.png', 'images/wordrobes/6.png', 'images/wordrobes/13.png'],
+    3: ['images/tvunits/9.png', 'images/wordrobes/6.png', 'images/wordrobes/13.png'],
+    4: ['images/tvunits/9.png', 'images/wordrobes/6.png', 'images/wordrobes/13.png'],
+    5: ['images/tvunits/9.png', 'images/wordrobes/6.png', 'images/wordrobes/13.png']
+  };
+
+  let currentSet = 1;
+
+  const updateImages = (setNumber) => {
+    const images = imageSets[setNumber];
+    document.querySelectorAll('.gallery-image-row').forEach((row, index) => {
+      row.style.display = index === setNumber - 1 ? 'block' : 'none'; // Show the current set
+    });
+    document.querySelectorAll('.gallery-bubble').forEach(bubble => bubble.classList.remove('active'));
+    document.querySelector(`.gallery-bubble[data-set="${setNumber}"]`).classList.add('active');
+    currentSet = setNumber;
+  };
+
+  document.querySelectorAll('.gallery-bubble').forEach(bubble => {
+    bubble.addEventListener('click', () => {
+      const setNumber = parseInt(bubble.getAttribute('data-set'));
+      updateImages(setNumber);
+    });
+  });
+
+  document.querySelector('.gallery-arrow.left').addEventListener('click', () => {
+    currentSet = currentSet > 1 ? currentSet - 1 : 5; // Adjust to your number of sets
+    updateImages(currentSet);
+  });
+
+  document.querySelector('.gallery-arrow.right').addEventListener('click', () => {
+    currentSet = currentSet < 5 ? currentSet + 1 : 1; // Adjust to your number of sets
+    updateImages(currentSet);
+  });
+
+  const modal = document.getElementById('modal');
+  const zoomedImage = document.getElementById('zoomedImage');
+  const closeModal = document.querySelector('.gallery-close');
+  let currentImageIndex = 0;
+
+  document.querySelectorAll('.gallery-image-row img').forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentImageIndex = index;
+      zoomedImage.src = img.src;
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  const updateModalImage = (direction) => {
+    const images = imageSets[currentSet];
+    currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+    zoomedImage.src = images[currentImageIndex];
+  };
+
+  document.getElementById('modalLeft').addEventListener('click', () => updateModalImage(-1));
+  document.getElementById('modalRight').addEventListener('click', () => updateModalImage(1));
+
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Initial load
+  updateImages(1); // Show first set of images initially
+</script>
+
+<style>
+  /* Basic styling */
+  .container-gal {
+    width: 100%; /* Full width for the main container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centers the container horizontally */
+    margin-bottom: 20px;
+  }
+
+  .gallery-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .gallery-title {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .gallery-image-container {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gallery-image-row {
+    display: none; /* Hide all initially */
+  }
+
+  .gallery-image-row img {
+    width: 300px; /* Image width */
+    margin: 10px; /* Space between images */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth hover effect */
+  }
+
+  .gallery-image-row img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+
+  .gallery-pagination {
+    margin-top: 20px;
+  }
+
+  .gallery-bubble {
+    padding: 10px 15px;
+    background-color: #e7e7e7; /* Light gray */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+  }
+
+  .gallery-bubble:hover {
+    background-color: #d1d1d1; /* Dark gray on hover */
+  }
+
+  .gallery-bubble.active {
+    background-color: #4CAF50; /* Green for active bubble */
+    color: white; /* White text for active bubble */
+  }
+
+  .gallery-arrow {
+    font-size: 24px; /* Arrow size */
+    cursor: pointer;
+  }
+
+  .gallery-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* On top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+    justify-content: center; /* Center modal content */
+    align-items: center;
+  }
+
+  .gallery-modal-content {
+    position: relative; /* For positioning the close button */
+  }
+
+  .gallery-modal-content img {
+    max-width: 80%; /* Max width of the zoomed image */
+    max-height: 80%; /* Max height of the zoomed image */
+    margin: auto; /* Center image */
+    display: block;
+    border-radius: 10px; /* Rounded corners */
+  }
+
+  .gallery-close {
+    position: absolute; /* Position close button */
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white; /* Close button color */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+
+  .wrong-symbol {
+    position: absolute; /* Position wrong symbol */
+    top: 10px;
+    right: 10px; /* Adjusted position */
+    width: 50px; /* Size of the wrong symbol */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1001; /* Ensure it's above modal content */
+  }
+
+  .gallery-arrow.left, .gallery-arrow.right {
+    position: absolute; /* Position arrows */
+    top: 50%;
+    transform: translateY(-50%);
+    color: white; /* Arrow color */
+    font-size: 40px; /* Arrow size */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+
+  .gallery-arrow.left {
+    left: 40px; /* Position left arrow */
+  }
+
+  .gallery-arrow.right {
+    right: 60px; /* Position right arrow */
+  }
+</style>
+
+
+
+
+
+
 
 
 
