@@ -1193,7 +1193,7 @@ footer li a:hover {
 
 .copyright {
   border-top: 1px solid #afafaf;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   text-align: center;
   font-size: 14px;
   padding-top: 20px;
