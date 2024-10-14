@@ -1185,7 +1185,10 @@ footer li a:hover {
 .social a:hover {
   color: #D19A23;
 }
-
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #D49826 !important;
+}
 .copyright a {
   color: #D19A23;
   text-decoration: none;
@@ -2375,7 +2378,11 @@ q {
 
 
 }
-
+@media(max-width:992px){
+  .navigation .nav-link{
+    color: white;
+  }
+}
 
 .shades{
   background: rgba(0,0,0,.43);
