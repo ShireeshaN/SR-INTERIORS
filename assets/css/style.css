@@ -1522,9 +1522,9 @@ hr {
 
 .inner-contact-img {
   width: 100%;
-  height: 300px;
+  height: 550px;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .form-link-txt {
