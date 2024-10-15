@@ -24,7 +24,7 @@ $(".pricing-carousel").owlCarousel({
         items: 2,
       },
       1200: {
-        items: 2,
+        items: 3,
       },
     },
   });
@@ -47,7 +47,7 @@ $(".pricing-carousel").owlCarousel({
         items: 2,
       },
       1200: {
-        items: 2,
+        items: 3,
       },
     },
   });
