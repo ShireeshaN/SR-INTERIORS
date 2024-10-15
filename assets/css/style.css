@@ -2,9 +2,17 @@ body::-webkit-scrollbar {
   width: 4px;
 }
 
+@font-face {
+  font-family: 'Queensides';
+  src: 
+       url('/fonts/queensides-font/Queensides-3z7Ey.ttf') format('truetype');
+     
+ 
+}
 body {
   /* background-color: #020202; */
   background-color: white;
+  
 }
 
 body::-webkit-scrollbar-track {
@@ -2394,6 +2402,8 @@ q {
 }
 .smallhead{
   color: #D19A23;
+  
+ 
 }
 
 .rightssym{
