@@ -245,7 +245,7 @@
 
 
       
-    <!-- Gallery -->
+<!-- Gallery -->
 <div class="gallery-container container-gal mt-5">
   <div class="gallery-header">
     <h2 class="gallery-title pb-3">Our Gallery</h2>
@@ -297,9 +297,9 @@
     <img id="zoomedImage" src="" alt="Zoomed Image">
     <span class="gallery-arrow left" id="modalLeft">&#8249;</span>
     <span class="gallery-arrow right" id="modalRight">&#8250;</span>
-
   </div>
 </div>
+
 
 <script>
   const imageSets = {
@@ -377,133 +377,160 @@
 
 <style>
   /* Basic styling */
-  .container-gal {
-    width: 100%; /* Full width for the main container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; /* Centers the container horizontally */
-    margin-bottom: 20px;
-  }
+.container-gal {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 
-  .gallery-container {
-    text-align: center;
-    padding: 20px;
-  }
+.gallery-container {
+  text-align: center;
+  padding: 20px;
+}
 
-  .gallery-title {
-    margin-bottom: 20px;
-    color: #333;
-  }
+.gallery-title {
+  margin-bottom: 20px;
+  color: #333;
+}
 
+.gallery-image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Ensure vertical stacking of images */
+  justify-content: center;
+}
+
+.gallery-image-row {
+  display: flex;
+  flex-direction: column; /* Stacks images vertically */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gallery-image-row img {
+  width: 100%; /* Make images responsive */
+  max-width: 90%; /* Limits maximum width on larger screens */
+  margin: 10px 0; /* Spacing between images */
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-image-row img:hover {
+  transform: scale(1.05); /* Hover effect */
+}
+
+.gallery-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.gallery-bubble {
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.gallery-bubble:hover {
+  background-color: #d1d1d1;
+}
+
+.gallery-bubble.active {
+  background-color: #D49826;
+  color: white;
+}
+
+.gallery-arrow {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-modal-content {
+  position: relative;
+}
+
+.gallery-modal-content img {
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.gallery-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.gallery-arrow.left,
+.gallery-arrow.right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.gallery-arrow.left {
+  left: 20px;
+}
+
+.gallery-arrow.right {
+  right: 20px;
+}
+
+/* Media Query for larger screens */
+@media (min-width: 768px) {
   .gallery-image-container {
-    max-width: 100%;
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .gallery-image-row {
-    display: none; /* Hide all initially */
+    display: flex;
+    flex-direction: row; /* Aligns images horizontally */
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .gallery-image-row img {
-    width: 300px; /* Image width */
-    margin: 10px; /* Space between images */
-    border-radius: 8px; /* Rounded corners */
-    transition: transform 0.3s; /* Smooth hover effect */
-  }
-
-  .gallery-image-row img:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+    max-width: 30%; /* Adjust image size for larger screens */
   }
 
   .gallery-pagination {
-    margin-top: 20px;
+    margin-top: 30px;
   }
+}
 
-  .gallery-bubble {
-    padding: 10px 15px;
-    background-color: #e7e7e7; /* Light gray */
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Smooth hover effect */
-  }
-
-  .gallery-bubble:hover {
-    background-color: #d1d1d1; /* Dark gray on hover */
-  }
-
-  .gallery-bubble.active {
-    background-color: #D49826; /* Green for active bubble */
-    color: white; /* White text for active bubble */
-  }
-
-  .gallery-arrow {
-    font-size: 24px; /* Arrow size */
-    cursor: pointer;
-  }
-
-  .gallery-modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000; /* On top of other elements */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
-    justify-content: center; /* Center modal content */
-    align-items: center;
-  }
-
-  .gallery-modal-content {
-    position: relative; /* For positioning the close button */
-  }
-
-  .gallery-modal-content img {
-    max-width: 80%; /* Max width of the zoomed image */
-    max-height: 80%; /* Max height of the zoomed image */
-    margin: auto; /* Center image */
-    display: block;
-    border-radius: 10px; /* Rounded corners */
-  }
-
-  .gallery-close {
-    position: absolute; /* Position close button */
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: white; /* Close button color */
-    cursor: pointer; /* Pointer cursor on hover */
-  }
-
-  .wrong-symbol {
-    position: absolute; /* Position wrong symbol */
-    top: 10px;
-    right: 10px; /* Adjusted position */
-    width: 50px; /* Size of the wrong symbol */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 1001; /* Ensure it's above modal content */
-  }
-
-  .gallery-arrow.left, .gallery-arrow.right {
-    position: absolute; /* Position arrows */
-    top: 50%;
-    transform: translateY(-50%);
-    color: white; /* Arrow color */
-    font-size: 40px; /* Arrow size */
-    cursor: pointer; /* Pointer cursor on hover */
-  }
-
-  .gallery-arrow.left {
-    left: 40px; /* Position left arrow */
-  }
-
-  .gallery-arrow.right {
-    right: 60px; /* Position right arrow */
-  }
 </style>
 
      
