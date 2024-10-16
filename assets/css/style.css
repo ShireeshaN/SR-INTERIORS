@@ -2310,7 +2310,7 @@ q {
   color: #6d6d6d !important;
 }
 .copyright {
-     text-align: left;
+     text-align: center;
 }
  @media only screen and (min-width:320px) and (max-width: 876px) {
  .breadcrumb-content {
@@ -2350,7 +2350,7 @@ q {
 @media screen and (max-width: 768px) {
   .logos{
     /* height: 90px; */
-    width:100%;
+   
     margin-top: 0px;
     
   }
