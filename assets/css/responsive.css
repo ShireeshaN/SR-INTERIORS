@@ -438,7 +438,7 @@
   }
 
   .form-link-txt {
-    max-width: 250px;
+    max-width: 100%;
   }
 
   .form-link-txt h4 {
