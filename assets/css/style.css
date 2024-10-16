@@ -2412,3 +2412,31 @@ q {
   width:20px;
  
 }
+
+/**whatsapp**/
+
+.whatsapp {
+  position: fixed;
+  bottom: 6rem; /* Start off screen */
+  right: 0px; /* Adjust as needed */
+  width: 60px;
+  height: 60px;
+  
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:green;
+  animation: slideDown 2s forwards;
+  
+}
+
+.whatsapp a i {
+  color: #FCC900;
+  font-size: 35px;
+  
+  border-radius: 50%;
+  padding: 5px;
+  padding-bottom: 5px;
+  animation: round 2s linear infinite;
+}
