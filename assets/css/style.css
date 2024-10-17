@@ -1490,7 +1490,7 @@ hr {
   border-color: #2c2c2c;
   outline: none;
   box-shadow: none;
-  background-color: transparent;
+  background-color: #D19A23;
   color: #fff;
 }
 
@@ -2446,3 +2446,8 @@ q {
   padding-bottom: 5px;
   animation: round 2s linear infinite;
 }
+
+.dropdown-item.active{
+  background-color:#FCC900 ;
+}
+
