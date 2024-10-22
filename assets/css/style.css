@@ -567,6 +567,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .box {
+  
   position: absolute;
   right: 0;
   width: 20%;
