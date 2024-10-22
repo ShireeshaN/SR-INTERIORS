@@ -12,6 +12,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -1453,7 +1454,10 @@ color: white;
       
       <div class="side-txt-part milestone-txt-part">
         <div class="main-heading">
-          <h2 class="animated-heading">Modular Kitchen's</h2>
+          <h2 class="animated-heading">
+            <i class="fas fa-hashtag" style="color: #D19A23;"></i> <!-- Hash color icon -->
+            Modular Kitchen's
+          </h2>
           <p class="animated-text">
             A modular kitchen offers customizable layouts with pre-manufactured cabinets and efficient storage solutions, designed for optimal space utilization.
             It combines style and functionality, making it easy to install and maintain.
@@ -1467,7 +1471,10 @@ color: white;
       
       <div class="side-txt-part milestone-txt-part">
         <div class="main-heading">
-          <h2 class="animated-heading">Semi Modular Kitchen's</h2>
+          <h2 class="animated-heading">
+            <i class="fas fa-hashtag" style="color: #D19A23;"></i> <!-- Hash color icon -->
+            Semi Modular Kitchen's
+          </h2>
           <p class="animated-text">
             A semi-modular kitchen is a hybrid between traditional and modular kitchens, offering a balance of flexibility and customization. In this design, certain elements of the kitchen, such as the countertop and sink, are often built on-site, while the rest of the components, like cabinets and drawers, are pre-fabricated and assembled.
           </p>
@@ -1483,57 +1490,58 @@ color: white;
   </div>
 </section>
 
-
 <style>
   .milestone-section {
-  perspective: 1000px; /* Creates a 3D perspective effect */
-}
-
-.milestone-main-img {
-  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
-  transform: translateZ(0); /* Enables hardware acceleration */
-}
-
-.side-img-part:hover .milestone-main-img {
-  transform: scale(1.1) rotateY(5deg); /* Zoom and slight rotation on hover */
-}
-
-.animated-heading {
-  animation: fadeInUp 0.5s ease forwards; /* Fade-in animation for headings */
-}
-
-.animated-text {
-  animation: fadeInUp 0.7s ease forwards; /* Fade-in animation for text */
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+    perspective: 1000px; /* Creates a 3D perspective effect */
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .milestone-main-img {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+    transform: translateZ(0); /* Enables hardware acceleration */
   }
-}
 
-/* Background image styles */
-.milestone-bg {
-  width: 100%;
-  height: auto;
-  filter: blur(5px); /* Adds a blurred effect */
-  position: absolute; /* To overlay the text */
-  top: 0;
-  left: 0;
-  z-index: 1; /* Positions behind text */
-}
+  .side-img-part:hover .milestone-main-img {
+    transform: scale(1.1) rotateY(5deg); /* Zoom and slight rotation on hover */
+  }
 
-.side-txt-part {
-  position: relative; /* To allow z-index on text */
-  z-index: 2; /* Ensures text is above the background image */
-}
+  .animated-heading {
+    animation: fadeInUp 0.5s ease forwards; /* Fade-in animation for headings */
+    color: #ffffff; /* White text for visibility */
+  }
 
+  .animated-text {
+    animation: fadeInUp 0.7s ease forwards; /* Fade-in animation for text */
+    color: #ffffff; /* White text for visibility */
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Background image styles */
+  .milestone-bg {
+    width: 100%;
+    height: auto;
+    filter: blur(5px); /* Adds a blurred effect */
+    position: absolute; /* To overlay the text */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Positions behind text */
+  }
+
+  .side-txt-part {
+    position: relative; /* To allow z-index on text */
+    z-index: 2; /* Ensures text is above the background image */
+  }
 </style>
+
 
 
 
