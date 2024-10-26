@@ -1491,55 +1491,7 @@ color: white;
 </section>
 
 
-<section class="milestone-section p-5 mt-space mb-space" style="background-color:black; border-radius: 10px;">
-  <div class="row">
 
-    <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12">
-      <div class="side-img-part milestone-img-part">
-        <img src="images/MODULAR KITCHENS (1)/1.png" class="milestone-main-img animated-image" alt="Modular Kitchen">
-      </div>
-    </div>
-
-    <div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 p-5">
-      <img src="assets/images/h71.webp" class="milestone-bg" alt="Background Image">
-      
-      <div class="side-txt-part milestone-txt-part">
-        <div class="main-heading">
-          <h2 class="animated-heading">
-            <i class="fas fa-hashtag" style="color: #D19A23;"></i> <!-- Hash color icon -->
-            Modular Kitchen's
-          </h2>
-          <p class="animated-text">
-            A modular kitchen offers customizable layouts with pre-manufactured cabinets and efficient storage solutions, designed for optimal space utilization.
-            It combines style and functionality, making it easy to install and maintain.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 p-5">
-      <img src="assets/images/h71.webp" class="milestone-bg" alt="Background Image">
-      
-      <div class="side-txt-part milestone-txt-part">
-        <div class="main-heading">
-          <h2 class="animated-heading">
-            <i class="fas fa-hashtag" style="color: #D19A23;"></i> <!-- Hash color icon -->
-            Semi Modular Kitchen's
-          </h2>
-          <p class="animated-text">
-            A semi-modular kitchen is a hybrid between traditional and modular kitchens, offering a balance of flexibility and customization. In this design, certain elements of the kitchen, such as the countertop and sink, are often built on-site, while the rest of the components, like cabinets and drawers, are pre-fabricated and assembled.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12">
-      <div class="side-img-part milestone-img-part">
-        <img src="images/MODULAR KITCHENS (1)/semi-modulars.png" class="milestone-main-img animated-image" alt="Semi Modular Kitchen">
-      </div>
-    </div>
-  </div>
-</section>
 
 <style>
   .milestone-section {
@@ -1719,7 +1671,11 @@ color: white;
   <section class="centered-section container-full">
     <div class="content-box">
       <div class="text-block">
-        <h2 class="main-heading">Your ideal home is a click from reality</h2>
+        <div class="icon-heading">
+          <i class="fas fa-home icon"></i>
+          <!-- Replace with your icon image -->
+          <h2 class="main-heading">Your ideal home is a click from reality</h2>
+        </div>
         <p class="sub-paragraph">Connect with our expert designers for a free consultation</p>
       </div>
       <div class="button-block">
@@ -1731,20 +1687,25 @@ color: white;
 
 <style>
   .container-full {
-    width: 60%; /* 55% width for the main container */
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Centers the container horizontally */
+    margin: 0 auto;
     margin-bottom: 20px;
   }
-
- 
 
   .centered-section {
     background-color: black;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: perspective(600px) rotateX(5deg) rotateY(-3deg);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .centered-section:hover {
+    transform: perspective(600px) rotateX(0) rotateY(0);
   }
 
   .content-box {
@@ -1757,12 +1718,27 @@ color: white;
   .text-block {
     flex: 1;
     max-width: 100%;
+    animation: fadeInLeft 1s ease-in-out;
+  }
+
+  .icon-heading {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    animation: bounce 1.5s infinite alternate;
+
   }
 
   .main-heading {
     font-size: 24px;
     margin-bottom: 10px;
     color: #DEBB3B;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .sub-paragraph {
@@ -1775,6 +1751,7 @@ color: white;
     max-width: 25%;
     display: flex;
     justify-content: center;
+    animation: fadeInRight 1s ease-in-out;
   }
 
   .cta-button {
@@ -1786,31 +1763,50 @@ color: white;
     color: black;
     font-weight: bold;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(222, 187, 59, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(222, 187, 59, 0.7);
+  }
+
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
   }
 
   @media (max-width: 768px) {
     .container-full {
-    width: 90%; /* 55% width for the main container */
-    
-  }
+      width: 90%;
+    }
     .content-box {
       flex-direction: column;
       text-align: center;
     }
-
     .text-block, .button-block {
       max-width: 100%;
     }
-
     .main-heading {
       font-size: 20px;
     }
-
     .sub-paragraph {
       font-size: 14px;
     }
   }
 </style>
+
 
 
 
@@ -2254,7 +2250,7 @@ color: white;
 
 
 <!-- Gallery -->
-<div class="gallery-container container-gal mt-5" style="background-color: #D19A23;">
+<div class="gallery-container container-gal mt-5" style="background-color: #f9da9d;">
   <div class="gallery-header">
     <h2 class="gallery-title pb-3 text-white">Our Gallery</h2>
   </div>
@@ -2384,6 +2380,7 @@ color: white;
 </script>
 
 <style>
+  
   /* Basic styling */
 .container-gal {
   width: 100%;
