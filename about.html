@@ -198,47 +198,191 @@
       </section>
 
 
-      <section class="about-section section-size mt-space mb-space mb-3">
-        <div class="row justify-content-center">
-          <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
-            <div class="about-img-part side-img-part">
-              <div class="about-img-box">
-                <img src="images/abo2.png" class="about-img-box-main-img">
-                <div class="about-section-card">
-                  <!-- <div class="about-section-card-txt">
-                    <h3>12</h3>
-                    <h5>Years Experience</h5>
-                  </div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
-            <div class="about-txt-part side-txt-part">
-              <div class="main-heading">
-                <h6 style="display: flex; align-items: center; margin: 0;">
-                 
-                  <span class="smallhead">About Us</span>
-                </h6>
-                <h2 class="text-dark">Discover the art of interior transformation</h2>
-                <p>SR Interiors is a leading interior design firm committed to transforming spaces into stunning and functional environments. With a focus on innovative design solutions and meticulous attention to detail, we specialize in creating personalized interiors that reflect our clients' unique styles and preferences.</p>
-              </div>
-        
-              <!-- <div class="about-bottom-area">
-                <div class="about-button-part">
-                  <a href="about.html" class="main-clk-btn text-dark">About Us</a>
-                </div>
-              </div> -->
-            </div>
-          </div>
-          
-          
-      
-      
-      
+    <!--about-->
+
+<section class="about-section about-img-box section-size mt-space mb-space" style="background-color: #0a0a0a;">
+  <div class="row justify-content-center">
+    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+      <div class="about-img-part side-img-part">
+        <div class="">
+          <img src="images/kitchen-furniture-illustration.png" class="about-img-box-main-img" alt="Kitchen Image">
+          <div class="about-section-card"></div>
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+      <div class="about-txt-part side-txt-part">
+        <div class="main-heading">
+          <h6 class="smallhead"><i class="fas fa-info-circle"></i> About Us</h6>
+          <h2 class="text-white">Discover the Art of Interior Transformation</h2>
+          <p>
+            SR Interiors is a leading interior design firm committed to transforming spaces into stunning and functional environments.
+            With a focus on innovative design solutions and meticulous attention to detail, we specialize in creating personalized interiors 
+            that reflect our clients' unique styles and preferences.
+          </p>
+        </div>
+
+        <!-- Vision and Mission Section with Icons -->
+        <div class="row mt-4">
+          <div class="col-md-6 vision-mission">
+            <div class="vision-heading">
+              <i class="fas fa-eye"></i>
+              <h4 class="text-white">Our Vision</h4>
+            </div>
+            <p class="vision-mission-text">
+              To be the leading interior design firm that inspires and transforms living spaces, providing innovative solutions that enhance the quality of life.
+            </p>
+          </div>
+          <div class="col-md-6 vision-mission">
+            <div class="mission-heading">
+              <i class="fas fa-bullseye"></i>
+              <h4 class="text-white">Our Mission</h4>
+            </div>
+            <p class="vision-mission-text">
+              Our mission is to create exceptional interiors by combining our design expertise with our clients' visions, ensuring quality, functionality, and satisfaction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-dark {
+  color: #333;
+  font-size: 1.5rem; /* Adjust size if necessary */
+  font-weight: 600; /* Maintain bold font for emphasis */
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.row.mt-4 {
+  margin-top: 40px; /* Space above Vision and Mission section */
+}
+
+h4 {
+  font-weight: 600; /* Maintain bold font for headings */
+  margin-bottom: 10px; /* Space below headings */
+}
+
+p {
+  line-height: 1.6; /* Maintain line height for readability */
+  color: #666; /* Text color */
+  font-size: 1rem; /* Font size for paragraph */
+}
+
+.vision-mission {
+  margin-top: 20px; /* Space above vision and mission */
+  transition: transform 0.3s; /* Animation effect */
+}
+
+.vision-heading, .mission-heading {
+  font-size: 1.5rem; /* Slightly larger font for headings */
+  color: #d19a23; /* Color for headings */
+  margin-bottom: 10px; /* Space below headings */
+  display: flex; 
+  align-items: center; /* Align icon and text */
+}
+
+.vision-heading i, .mission-heading i {
+  margin-right: 8px; /* Space between icon and heading */
+  color: #d19a23; /* Icon color */
+  font-size: 1.7rem; /* Icon size */
+  transition: transform 0.3s; /* Animation effect for icons */
+}
+
+.vision-heading:hover i, .mission-heading:hover i {
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+.vision-mission-text {
+  line-height: 1.5;
+  color: #666;
+  font-size: 1rem; /* Font size for mission and vision text */
+  margin-bottom: 20px; /* Space below mission and vision text */
+  transition: color 0.3s; /* Transition effect for text color */
+}
+
+.vision-mission:hover .vision-mission-text {
+  color: #333; /* Change text color on hover */
+}
+
+.about-bottom-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-section-content {
+  display: flex;
+  align-items: center;
+}
+
+.Btn-Container {
+  display: flex;
+  align-items: center;
+  background-color: #d19a23;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.Btn-Container:hover {
+  background-color: #b58900;
+}
+
+.icon-Container {
+  margin-left: 10px;
+}
+
+.icon-Container svg {
+  fill: white; /* Change the icon color to white */
+}
+
+.about-bottom-area button {
+  border: none; /* Remove default button border */
+}
+
+.about-img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-img-box-main-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.about-img-box:hover .about-img-box-main-img {
+  transform: scale(1.1);
+}
+
+.main-heading {
+  margin-bottom: 20px;
+}
+
+.smallhead {
+  font-weight: bold;
+  color: #d19a23;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.smallhead i {
+  margin-right: 8px; /* Space between icon and text */
+  color: #d19a23; /* Icon color */
+}
+
+</style>
+
+<!--about-->
 
 
       
