@@ -2424,27 +2424,24 @@ q {
 
 .whatsapp {
   position: fixed;
-  bottom: 6rem; /* Start off screen */
-  right: 0px; /* Adjust as needed */
-  width: 60px;
-  height: 60px;
-  
+  bottom: 6.5rem; /* Start off screen */
+  right: 2px; /* Adjust as needed */
+  z-index: 999;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color:black;
+
+  /* background-color:black; */
   animation: slideDown 2s forwards;
   
 }
-
 .whatsapp a i {
   color: #FCC900;
-  font-size: 35px;
-  
+  font-size: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
   border-radius: 50%;
-  padding: 5px;
-  padding-bottom: 5px;
+padding: 0.7rem !important;
+background-color: black;
   animation: round 2s linear infinite;
 }
 
