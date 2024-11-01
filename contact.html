@@ -273,10 +273,16 @@
                 alert('Name is required!');
                 return false;
                 }
-                if (isEmpty(document.getElementById('data_2').value.trim())) {
-                alert('Phone Number is required!');
-                return false;
-                }
+                let phoneNumber = document.getElementById('data_2').value.trim();
+                          if (isEmpty(phoneNumber)) {
+                              alert('Phone Number is required!');
+                              return false;
+                          } else if (!/^\d{10}$/.test(phoneNumber)) {
+                              alert('Phone Number must be exactly 10 digits!');
+                              return false;
+                          }
+                  
+                          
                 if (isEmpty(document.getElementById('data_3').value.trim())) {
                 alert('Email is required!');
                 return false;

@@ -1215,23 +1215,34 @@ color: white;
                     </form>
                     
                     <script type="text/javascript">
-                    function validateForm() {
-                    if (isEmpty(document.getElementById('data_1').value.trim())) {
-                    alert('Name is required!');
-                    return false;
-                    }
-                    if (isEmpty(document.getElementById('data_2').value.trim())) {
-                    alert('Phone Number is required!');
-                    return false;
-                    }
-                    return true;
-                    }
-                    function isEmpty(str) { return (str.length === 0 || !str.trim()); }
-                    function validateEmail(email) {
-                    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
-                    return isEmpty(email) || re.test(email);
-                    }
-                    </script>
+                      function validateForm() {
+                          if (isEmpty(document.getElementById('data_1').value.trim())) {
+                              alert('Name is required!');
+                              return false;
+                          }
+                  
+                          let phoneNumber = document.getElementById('data_2').value.trim();
+                          if (isEmpty(phoneNumber)) {
+                              alert('Phone Number is required!');
+                              return false;
+                          } else if (!/^\d{10}$/.test(phoneNumber)) {
+                              alert('Phone Number must be exactly 10 digits!');
+                              return false;
+                          }
+                  
+                          return true;
+                      }
+                  
+                      function isEmpty(str) { 
+                          return (str.length === 0 || !str.trim()); 
+                      }
+                  
+                      function validateEmail(email) {
+                          var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+                          return isEmpty(email) || re.test(email);
+                      }
+                  </script>
+                  
               
                 </div>
 
