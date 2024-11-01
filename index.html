@@ -1175,7 +1175,7 @@ color: white;
 
           <div class="form-bubble-wrapper" data-aos="fade-right" data-aos-duration="2000">
               <div class="form-section">
-                  <form>
+                  <!-- <form>
                       <label for="name">Name:</label>
                       <input type="text" id="name" name="name" required>
 
@@ -1193,8 +1193,49 @@ color: white;
                       </div>
 
 
-                  </form>
-              </div>
+                  </form> -->
+              
+                  <form method="post" class="" action="//submit.form" onSubmit="return validateForm();">
+                    <div style="max-width: 400px;">
+                    </div>
+                    <div style="padding-bottom: 18px;">Name<span style="color: red;"> *</span><br/>
+                    <input type="text" id="data_1" name="data_1" style="max-width : 450px;" class="form-control"/>
+                    </div>
+                    <div style="padding-bottom: 18px;">Phone Number<span style="color: red;"> *</span><br/>
+                    <input type="number" id="data_2" name="data_2" style="max-width : 450px;" class="form-control"/>
+                    </div>
+                    <div style="padding-bottom: 18px;">Site Location<br/>
+                    <textarea id="data_3" false name="data_3" style="max-width : 450px;" rows="2" class="form-control"></textarea>
+                    </div>
+                    <div style="padding-bottom: 18px;"><input name="skip_Submit" class="form-submit-btn" value="Submit" type="submit"/></div>
+                    <div>
+                    <div style="float:right"><a href="https://www.100forms.com"  id="lnk100" title="form to email">form to email</a></div>
+                    <script src="https://www.100forms.com/js/FORMKEY:4B4FTKTAH2GQ" type="text/javascript"></script>
+                    </div>
+                    </form>
+                    
+                    <script type="text/javascript">
+                    function validateForm() {
+                    if (isEmpty(document.getElementById('data_1').value.trim())) {
+                    alert('Name is required!');
+                    return false;
+                    }
+                    if (isEmpty(document.getElementById('data_2').value.trim())) {
+                    alert('Phone Number is required!');
+                    return false;
+                    }
+                    return true;
+                    }
+                    function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+                    function validateEmail(email) {
+                    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+                    return isEmpty(email) || re.test(email);
+                    }
+                    </script>
+              
+                </div>
+
+
 
               <div class="bubble-section" data-aos="fade-left" data-aos-duration="2000">
                   <div class="bubble-row">
@@ -1222,6 +1263,11 @@ color: white;
 </section>
 
 <style>
+  #lnk100{
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+  }
   /* Fixed background section */
   .fixed-background {
       background-image: url('images/topbanner.jpg');
