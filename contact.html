@@ -43,7 +43,7 @@
 <div class="top-bar">
   <div class="contact-info">
     <a href="mailto:yourmail@example.com">
-      <i class="fas fa-envelope text-dark"></i> sr@interiors.com
+      <i class="fas fa-envelope text-dark"></i> srinteriors33@gmail.com
     </a> |
     <a href="tel:+9963043888">
       <i class="fas fa-phone text-dark"></i> +91 9963043888
@@ -201,7 +201,7 @@
         <div class="row">
           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
             <div class="side-img-part">
-              <form class="main-contact-form">
+              <!-- <form class="main-contact-form">
                
                 <p>Call now for a free consultation</p>
                 <div class="mt-4">
@@ -242,7 +242,63 @@
                 <div class="mt-4">
                   <button class="form-submit-btn">Send Messages</button>
                 </div>
-              </form>
+              </form> -->
+           
+              <form class="main-contact-form" method="post" action="//submit.form" onSubmit="return validateForm();">
+                
+                <div style="max-width: 400px;">
+                </div>
+                <div style="padding-bottom: 18px;"><span class="label">Name</span><span style="color: red;"> *</span><br/>
+                <input type="text" id="data_1" name="data_1" style="max-width : 450px;" class="form-control"/>
+                </div>
+                <div style="padding-bottom: 18px;"><span class="label">Phone Number</span><span style="color: red;"> *</span><br/>
+                <input type="number" id="data_2" name="data_2" style="max-width : 450px;" class="form-control"/>
+                </div>
+                <div style="padding-bottom: 18px;"><span class="label">Email</span><span style="color: red;"> *</span><br/>
+                <input type="text" id="data_3" name="data_3" style="max-width : 450px;" class="form-control"/>
+                </div>
+                <div style="padding-bottom: 18px;"> <span class="label">Message</span> <br/>
+                <textarea id="data_4" false name="data_4" style="max-width : 450px;" rows="3" class="form-control"></textarea>
+                </div>
+                <div style="padding-bottom: 18px;"><input name="skip_Submit" class="form-submit-btn" value="Submit" type="submit"/></div>
+                <div>
+                <div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+                <script src="https://www.100forms.com/js/FORMKEY:N2322LGMJGB7" type="text/javascript"></script>
+                </div>
+                </form>
+                
+                <script type="text/javascript">
+                function validateForm() {
+                if (isEmpty(document.getElementById('data_1').value.trim())) {
+                alert('Name is required!');
+                return false;
+                }
+                let phoneNumber = document.getElementById('data_2').value.trim();
+                          if (isEmpty(phoneNumber)) {
+                              alert('Phone Number is required!');
+                              return false;
+                          } else if (!/^\d{10}$/.test(phoneNumber)) {
+                              alert('Phone Number must be exactly 10 digits!');
+                              return false;
+                          }
+                  
+                          
+                if (isEmpty(document.getElementById('data_3').value.trim())) {
+                alert('Email is required!');
+                return false;
+                }
+                if (!validateEmail(document.getElementById('data_3').value.trim())) {
+                alert('Email must be a valid email address!');
+                return false;
+                }
+                return true;
+                }
+                function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+                function validateEmail(email) {
+                var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+                return isEmpty(email) || re.test(email);
+                }
+                </script>
             </div>
           </div>
           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
@@ -369,7 +425,19 @@
         </div>
       </section>
 
-      
+      <style>
+        #lnk100{
+          color: black;
+          display: none;
+        }
+        .main-contact-form .label{
+          color: white;
+         
+        }
+        .main-contact-form div{
+          margin-top: 2rem;
+        }
+      </style>
 
       <section class="map-section">
         <iframe
@@ -471,7 +539,7 @@
               </li>
               <li>
                 <a href="mailto:projects@sr.com" target="_blank"
-                  ><i class="bi bi-envelope me-2" style="color: #D19A23;"></i>sr@interiors.com</a
+                  ><i class="bi bi-envelope me-2" style="color: #D19A23;"></i>srinteriors33@gmail.com</a
                 >
               </li>
               <li>
