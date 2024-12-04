@@ -1171,37 +1171,20 @@ color: white;
 
           <div class="form-bubble-wrapper" data-aos="fade-right" data-aos-duration="2000">
               <div class="form-section">
-                  <!-- <form>
-                      <label for="name">Name:</label>
-                      <input type="text" id="name" name="name" required>
-
-                      <label for="phone">Phone Number:</label>
-                      <input type="tel" id="phone" name="phone" required>
-
-                      <label for="location">Site Location:</label>
-                      <input type="text" id="location" name="location" required>
-
-                      <div class="">
-                          <button type="submit">Submit</button>
-
-
-                          
-                      </div>
-
-
-                  </form> -->
+                  
               
-                  <form method="post" class="" action="//submit.form" onSubmit="return validateForm();">
+                  <form method="post" class="" action="//submit.form" onSubmit="return validateForm();"> 
+                    <h2 class="text-black">Contact Us</h2>
                     <div style="max-width: 400px;">
                     </div>
                     <div style="padding-bottom: 18px;">Name<span style="color: red;"> *</span><br/>
-                    <input type="text" id="data_1" name="data_1" style="max-width : 450px;" class="form-control"/>
+                    <input type="text" id="data_1" name="data_1" style="max-width : 450px; border: 2px solid black; " class="form-control"/>
                     </div>
                     <div style="padding-bottom: 18px;">Phone Number<span style="color: red;"> *</span><br/>
-                    <input type="number" id="data_2" name="data_2" style="max-width : 450px;" class="form-control"/>
+                    <input type="number" id="data_2" name="data_2" style="max-width : 450px; border: 2px solid black;" class="form-control"/>
                     </div>
                     <div style="padding-bottom: 18px;">Site Location<br/>
-                    <textarea id="data_3" false name="data_3" style="max-width : 450px;" rows="2" class="form-control"></textarea>
+                    <textarea id="data_3" false name="data_3" style="max-width : 450px; border: 2px solid black;" rows="2" class="form-control"></textarea>
                     </div>
                     <div style="padding-bottom: 18px;"><input name="skip_Submit" class="form-submit-btn" value="Submit" type="submit"/></div>
                     <div>
@@ -1366,19 +1349,20 @@ color: white;
   }
 
   .bubble {
-      position: relative;
-      border-radius: 50%;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black; /* Add white border */
+}
 
-  .bubble img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-  }
+.bubble img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
 
   /* Bubble sizes */
   .bubble-large {
