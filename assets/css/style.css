@@ -2450,7 +2450,7 @@ background-color: black;
 }
 
 .honetags{
-  font-size: 30px;
+  font-size: 30px !important;
   color: #000;
 }
 
