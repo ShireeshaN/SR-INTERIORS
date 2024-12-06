@@ -1328,6 +1328,30 @@ color: white;
       height: 100vh;
       position: relative;
   }
+  @media (max-width:992px){
+    .fixed-background{
+      /* padding: 200px !important; */
+    }
+    .content h2{
+      padding-top: unset;
+    }
+    .form-bubble-wrapper{
+      height: 100%;
+    }
+    .bubble-large {
+      width: 200px;
+      height: 200px;
+  }
+  }
+  @media (max-width: 768px) {
+    .bubble-large {
+        width: unset; 
+        height: unset;
+    }
+    .content h2{
+      margin-top: unset;
+    }
+}
 
   .overlay {
       background-color: rgba(128, 128, 128, 0.5); /* Light gray RGB layer */
@@ -1453,7 +1477,7 @@ color: white;
 
       .content h2 {
           font-size: 1.4rem; /* Decrease font size for mobile */
-          margin-top: 65px;
+          /* margin-top: 65px; */
       }
 
       .form-bubble-wrapper {
@@ -1478,13 +1502,13 @@ color: white;
       }
 
       .bubble-large {
-          width: 120px;
-          height: 120px;
+          /* width: 120px;
+          height: 120px; */
       }
 
       .bubble-small {
-          width: 80px;
-          height: 80px;
+          /* width: 80px;
+          height: 80px; */
       }
   }
 </style>
@@ -2201,10 +2225,10 @@ color: white;
       color: #fff;
   }
 /* Bubble sizes */
-.bubble-large {
+/* .bubble-large {
       width: 300px;
       height: 300px;
-  }
+  } */
 
   .bubble-small {
       width: 180px;
@@ -2318,7 +2342,7 @@ color: white;
 <!-- Gallery -->
 <div class="gallery-container container-gal mt-5" style="background-color: #f9da9d;">
   <div class="gallery-header">
-    <h2 class="gallery-title pb-3 text-white" data-aos="fade-right" data-aos-duration="2000">Our Gallery</h2>
+    <h2 class="gallery-title pb-3 text-black" data-aos="fade-right" data-aos-duration="2000">Our Gallery</h2>
   </div>
   <div class="gallery-image-container" data-aos="fade-left" data-aos-duration="2000">
     <div class="gallery-image-row" id="row1">
