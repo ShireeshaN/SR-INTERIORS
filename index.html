@@ -776,8 +776,8 @@ p {
   /* Classic 3D Text Styling */
   .classic-heading {
     font-size: 2.8rem; /* Bold and prominent size */
-    font-family: 'Times New Roman', serif; /* Timeless classic font */
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Smooth and modern font */
+    font-weight: 700; /* Bold weight for emphasis */
     color: #333; /* Elegant dark shade for sophistication */
     text-shadow: 
       2px 2px 0px #B5B5B5, /* Light shadow for a soft 3D edge */
@@ -803,7 +803,21 @@ p {
     color: #666; /* Neutral color to complement the text */
     margin-left: 10px;
   }
+
+  /* Responsive Styling for Mobile */
+  @media (max-width: 768px) {
+    .classic-heading {
+      font-size: 1.8rem; /* Decrease heading size for mobile */
+    }
+
+    .icoo {
+      font-size: 1.2rem; /* Adjust icon size for mobile */
+    }
+  }
 </style>
+
+<!-- Google Fonts Import -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 
 <style>
