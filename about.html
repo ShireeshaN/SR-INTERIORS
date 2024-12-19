@@ -658,27 +658,43 @@ p {
   right: 20px;
 }
 
-/* Media Query for larger screens */
-@media (min-width: 768px) {
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 0 15px; /* Add padding to create space on both sides */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+
   .gallery-image-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column; /* Stack rows vertically */
   }
 
   .gallery-image-row {
-    display: flex;
-    flex-direction: row; /* Aligns images horizontally */
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column; /* Ensure images stack vertically */
+    align-items: center;
   }
 
   .gallery-image-row img {
-    max-width: 30%; /* Adjust image size for larger screens */
+    width: 100%; /* Make the image responsive */
+    max-width: 95%; /* Ensure it doesn’t touch edges */
+    margin: 10px auto; /* Add spacing around images */
+    object-fit: cover; /* Ensure proper scaling */
+    border-radius: 8px;
   }
 
   .gallery-pagination {
-    margin-top: 30px;
+    flex-wrap: wrap; /* Allow bubbles to wrap in smaller widths */
+    margin-top: 20px;
+  }
+
+  .gallery-arrow {
+    font-size: 18px; /* Adjust arrow size for smaller screens */
+  }
+
+  .gallery-bubble {
+    height: 30px;
+    width: 30px;
+    font-size: 14px; /* Adjust size for smaller screens */
   }
 }
 
