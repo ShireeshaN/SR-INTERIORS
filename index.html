@@ -2699,6 +2699,10 @@ color: white;
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
+  .gallery-container {
+    padding: 0 10px; /* Add padding to the entire gallery container */
+  }
+
   .gallery-image-container {
     flex-direction: column; /* Stack rows vertically */
   }
@@ -2709,9 +2713,11 @@ color: white;
   }
 
   .gallery-image-row img {
-    width: 90%; /* Set a responsive width */
+    width: calc(100% - 20px); /* Responsive width with proper spacing */
     max-width: 100%; /* Ensure images don’t overflow */
-    margin: 10px auto; /* Center images and add spacing */
+    margin: 10px auto; /* Add spacing around the images */
+    object-fit: cover; /* Ensure proper scaling */
+    border-radius: 8px;
   }
 
   .gallery-pagination {
@@ -2729,6 +2735,7 @@ color: white;
     font-size: 14px; /* Adjust size for smaller screens */
   }
 }
+
 
 
 </style>
