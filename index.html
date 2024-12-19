@@ -1617,39 +1617,43 @@ color: white;
 
 
 
-<section class=" milestone-section p-5 mt-space mb-space" style="background-color:black; border-radius: 10px;">
-  <div class="row">
+<section class="milestone-section p-5 mt-space mb-space" style="background-color: black; border-radius: 10px;">
+  <div class="row align-items-center">
 
-    <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12" data-aos="fade-right" data-aos-duration="2000">
+    <!-- Modular Kitchen Section -->
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12" data-aos="fade-right" data-aos-duration="2000">
       <div class="side-img-part milestone-img-part">
         <img src="images/modulrskit.jpg" class="milestone-main-img animated-image" alt="Interior Designers in Nallagandla">
       </div>
     </div>
 
-    <div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 p-5">
-      <img src="assets/images/h71.webp" class="milestone-bg" alt="home interior renovation in Hyderabad">
-      
-      <div class="side-txt-part milestone-txt-part" data-aos="fade-left" data-aos-duration="2000">
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 p-4" data-aos="fade-left" data-aos-duration="2000">
+      <div class="side-txt-part milestone-txt-part">
         <div class="main-heading">
           <h2 class="animated-heading">
-            <i class="fas fa-hashtag" style="color: #D19A23;"></i> <!-- Hash color icon -->
+            <i class="fas fa-hashtag" style="color: #D19A23;"></i>
             Modular Kitchen's
           </h2>
           <p class="animated-text">
-            A modular kitchen offers customizable layouts with pre-manufactured cabinets and efficient storage solutions, designed for optimal space utilization.
-            It combines style and functionality, making it easy to install and maintain.
+            A modular kitchen offers customizable layouts with pre-manufactured cabinets and efficient storage solutions, designed for optimal space utilization. It combines style and functionality, making it easy to install and maintain.
           </p>
         </div>
       </div>
     </div>
 
-    <div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 p-5" data-aos="fade-left" data-aos-duration="2000">
-      <img src="assets/images/h71.webp" class="milestone-bg" alt="home interior renovation in Hyderabad">
-      
+    <!-- Semi Modular Kitchen Section -->
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-lg-2 order-1 p-4" data-aos="fade-left" data-aos-duration="2000">
+      <div class="side-img-part milestone-img-part">
+        <img src="images/semimodul.jpg" class="milestone-main-img animated-image" alt="Top Home Interior Designers in Nallagandla">
+      </div>
+     
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-lg-1 order-2" data-aos="fade-right" data-aos-duration="2000">
       <div class="side-txt-part milestone-txt-part">
         <div class="main-heading">
           <h2 class="animated-heading">
-            <i class="fas fa-hashtag" style="color: #D19A23;"></i> <!-- Hash color icon -->
+            <i class="fas fa-hashtag" style="color: #D19A23;"></i>
             Semi Modular Kitchen's
           </h2>
           <p class="animated-text">
@@ -1657,38 +1661,48 @@ color: white;
           </p>
         </div>
       </div>
-    </div>
-
-    <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12" data-aos="fade-right" data-aos-duration="2000">
-      <div class="side-img-part milestone-img-part">
-        <img src="images/semimodul.jpg" class="milestone-main-img animated-image" alt="Top Home Interior Designers in Nallagandla">
-      </div>
+     
     </div>
   </div>
 </section>
 
 <style>
+  /* General Section Styles */
   .milestone-section {
-    perspective: 1000px; /* Creates a 3D perspective effect */
+    padding: 50px 20px;
+    background-color: black;
+    border-radius: 10px;
   }
 
+  /* Image Container */
   .milestone-main-img {
-    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
-    transform: translateZ(0); /* Enables hardware acceleration */
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
   }
 
   .side-img-part:hover .milestone-main-img {
-    transform: scale(1.1) rotateY(5deg); /* Zoom and slight rotation on hover */
+    transform: scale(1.1) rotateY(5deg);
+  }
+
+  /* Text Content */
+  .milestone-txt-part {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
   }
 
   .animated-heading {
-    animation: fadeInUp 0.5s ease forwards; /* Fade-in animation for headings */
-    color: #ffffff; /* White text for visibility */
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    animation: fadeInUp 0.5s ease forwards;
   }
 
   .animated-text {
-    animation: fadeInUp 0.7s ease forwards; /* Fade-in animation for text */
-    color: #ffffff; /* White text for visibility */
+    font-size: 1rem;
+    line-height: 1.5;
+    animation: fadeInUp 0.7s ease forwards;
   }
 
   @keyframes fadeInUp {
@@ -1702,23 +1716,36 @@ color: white;
     }
   }
 
-  /* Background image styles */
-  .milestone-bg {
-    width: 100%;
-    height: auto;
-    filter: blur(5px); /* Adds a blurred effect */
-    position: absolute; /* To overlay the text */
-    top: 0;
-    left: 0;
-    z-index: 1; /* Positions behind text */
-    
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .milestone-section {
+      padding: 20px 10px;
+    }
+
+    .animated-heading {
+      font-size: 1.5rem;
+    }
+
+    .animated-text {
+      font-size: 0.9rem;
+    }
+
+    .milestone-main-img {
+      margin-bottom: 20px;
+    }
   }
 
-  .side-txt-part {
-    position: relative; /* To allow z-index on text */
-    z-index: 2; /* Ensures text is above the background image */
+  @media (max-width: 576px) {
+    .animated-heading {
+      font-size: 1.25rem;
+    }
+
+    .animated-text {
+      font-size: 0.8rem;
+    }
   }
 </style>
+
 
 
 
