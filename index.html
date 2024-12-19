@@ -319,7 +319,7 @@ src="https://www.facebook.com/tr?id=798700839056721&ev=PageView&noscript=1"
   <div class=""></div>
   <div class="slider-container">
       <!-- Slide 1 -->
-      <div class="slide active" style="background-image: url('images/bannerssimage/5.png');">
+      <div class="slide active" style="background-image: url('images/bannerssimage/9.png');">
           <div class="info shades">
              
               <h1 class="honetags">best interior design in Nallagandla, Hyderabad</h1>
@@ -330,7 +330,7 @@ src="https://www.facebook.com/tr?id=798700839056721&ev=PageView&noscript=1"
       </div>
 
       <!-- Slide 2-->
-      <div class="slide" style="background-image: url('images/bannerssimage/9.png');">
+      <div class="slide" style="background-image: url('images/bannerssimage/5.png');">
           <div class="info shades">
            
               <h2 class="honetags text-white">Creating Spaces That Inspire</h2>
@@ -2700,7 +2700,8 @@ color: white;
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .gallery-container {
-    padding: 0 10px; /* Add padding to the entire gallery container */
+    padding: 0 15px; /* Add padding to create space on both sides */
+    box-sizing: border-box; /* Ensure padding is included in the width */
   }
 
   .gallery-image-container {
@@ -2713,9 +2714,9 @@ color: white;
   }
 
   .gallery-image-row img {
-    width: calc(100% - 20px); /* Responsive width with proper spacing */
-    max-width: 100%; /* Ensure images don’t overflow */
-    margin: 10px auto; /* Add spacing around the images */
+    width: 100%; /* Make the image responsive */
+    max-width: 95%; /* Ensure it doesn’t touch edges */
+    margin: 10px auto; /* Add spacing around images */
     object-fit: cover; /* Ensure proper scaling */
     border-radius: 8px;
   }
