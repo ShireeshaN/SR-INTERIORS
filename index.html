@@ -1275,44 +1275,48 @@ color: white;
       cursor: pointer;
   }
 
-  /* Responsive adjustments for mobile */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .sectionproo {
         flex-direction: column; /* Stack elements vertically on mobile */
     }
 
     .container {
-        max-width: 100%; /* Make containers full width */
+        width: 100%; /* Make containers full width */
         height: 400px; /* Adjust height for mobile */
     }
 
     .scroll-images img {
-        width: 90%; /* Slight padding around the images */
-        margin: 5px auto; /* Center the images */
+        width: 100%; /* Images take full width of the container */
+        height: auto; /* Automatically adjust height to maintain aspect ratio */
+        border-radius: 8px;
+        object-fit: cover; /* Ensures the image is properly cropped */
     }
 
     .sectionproo::before {
         font-size: 100px; /* Reduce background text size */
     }
 
-    .left {
-        font-size: 40px; /* Adjust text size for mobile */
+    .buttons-container {
+        margin-top: 10px; /* Adjust button spacing */
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        height: 350px; /* Further reduce height for extra small screens */
+        height: 300px; /* Further reduce height for extra small screens */
     }
 
     .scroll-images img {
-        width: 100%; /* Fill the container on very small screens */
+        width: 100%; /* Images take full width of the container */
+        height: auto; /* Maintain proper aspect ratio */
     }
 
     .sectionproo::before {
         font-size: 80px; /* Smaller font size for "PROJECTS" background */
     }
-}</style>
+}
+
+</style>
 
     
 
