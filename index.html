@@ -2697,33 +2697,39 @@ color: white;
   right: 20px;
 }
 
-/* Media Query for larger screens */
-@media (min-width: 768px) {
+/* Mobile-specific styles */
+@media (max-width: 768px) {
   .gallery-image-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    
+    flex-direction: column; /* Stack rows vertically */
   }
 
   .gallery-image-row {
-    display: flex;
-    flex-direction: row; /* Aligns images horizontally */
-    justify-content: center;
-    flex-wrap: wrap;
-    
+    flex-direction: column; /* Ensure images stack vertically */
+    align-items: center;
   }
 
   .gallery-image-row img {
-    max-width: 30%; /* Adjust image size for larger screens */
-    justify-content: space-around;
-
+    width: 90%; /* Set a responsive width */
+    max-width: 100%; /* Ensure images don’t overflow */
+    margin: 10px auto; /* Center images and add spacing */
   }
 
   .gallery-pagination {
-    margin-top: 30px;
+    flex-wrap: wrap; /* Allow bubbles to wrap in smaller widths */
+    margin-top: 20px;
+  }
+
+  .gallery-arrow {
+    font-size: 18px; /* Adjust arrow size for smaller screens */
+  }
+
+  .gallery-bubble {
+    height: 30px;
+    width: 30px;
+    font-size: 14px; /* Adjust size for smaller screens */
   }
 }
+
 
 </style>
 
