@@ -390,7 +390,7 @@ body::-webkit-scrollbar-thumb {
   top: 30%;
   right: 0px;
   text-align: start;
-  max-width: 650px;
+  max-width: 100%;
   z-index: 100;
 }
 
